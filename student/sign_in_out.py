@@ -15,7 +15,7 @@ def signin(request):
     except S.DoesNotExist:
         return JsonResponse({
             'ret': 1,
-            'msg': f'学号 为`{studentId}`的客户不存在'
+            'msg': f'学号 为`{studentId}`的学生不存在'
         })
     userName=student.xm
     # 使用 Django auth 库里面的方法校验用户名、密码
@@ -31,7 +31,7 @@ def signin(request):
             return JsonResponse({'ret': 0, 'msg': '用户已经被禁用'})
     # 否则就是用户名、密码有误
     else:
-        return JsonResponse({'ret': 1, 'msg': '学号或者密码错误'})
+        return JsonResponse({'ret': 1, 'msg': '密码错误'})
 
 
 # 登出处理

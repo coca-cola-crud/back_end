@@ -128,3 +128,15 @@ class S(models.Model):
     class Meta:
         managed = False
         db_table = 's'
+
+
+class T(models.Model):
+    gh = models.CharField(primary_key=True, max_length=10)
+    xm = models.CharField(max_length=20)
+    xb = models.CharField(max_length=6)
+    xl = models.CharField(max_length=10)
+    yx = models.CharField(max_length=20)
+
+    class Meta:
+        managed = False
+        db_table = 't'

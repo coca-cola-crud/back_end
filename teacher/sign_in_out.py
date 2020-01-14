@@ -1,34 +1,37 @@
 from django.http import JsonResponse
 from django.contrib.auth import authenticate, login, logout
 from database.models import S
+from database.models import T
+import json
 # 登录处理
 def signin(request):
-    # 从 HTTP POST 请求中获取工号、密码参数
-    teacherId = request.POST.get('gh')
-    passWord = request.POST.get('password')
+    request.params = json.loads(request.body)
+    teacherId = request.params['teacherid']
+    passWord = request.params['password']
+    print(teacherId)
     try:
-        # 根据学号从数据库学生表中找到相应的学生记录
-        teacher = S.objects.get(xh=teacherId)
-    except S.DoesNotExist:
-        return {
+        # 根据工号从数据库教师表中找到相应的教师记录
+        teacher = T.objects.get(gh=teacherId)
+    except T.DoesNotExist:
+        return JsonResponse({
             'ret': 1,
-            'msg': f'工号 为`{teacherId}`的教师不存在'
-        }
-    userName=teacher.xm
+            'msg': f'工号为`{teacherId}`的老师不存在'
+        })
+    userName = teacher.xm
     # 使用 Django auth 库里面的方法校验用户名、密码
     user = authenticate(username=userName, password=passWord)
-    # 如果能找到用户，并且密码正确
+    # 如果能找到教师，并且密码正确
     if user is not None:
-        if user.is_superuser:
+        if user.is_active:
             login(request, user)
             # 在session中存入用户类型
-            request.session['usertype'] = 'teacher'
+            request.session['member_id'] = teacherId
             return JsonResponse({'ret': 0})
         else:
-            return JsonResponse({'ret': 1, 'msg': '请使用教师账户登录'})
-    # 否则就是用户名、密码有误
+            return JsonResponse({'ret': 0, 'msg': '用户已经被禁用'})
+    # 否则就是密码有误
     else:
-        return JsonResponse({'ret': 1, 'msg': '账号或者密码错误'})
+        return JsonResponse({'ret': 1, 'msg': '密码错误'})
 
 # 登出处理
 def signout(request):
