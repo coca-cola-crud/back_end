@@ -74,6 +74,20 @@ class AuthUserUserPermissions(models.Model):
         unique_together = (('user', 'permission'),)
 
 
+class C(models.Model):
+    kh = models.CharField(primary_key=True, max_length=10)
+    km = models.CharField(max_length=20)
+    xf = models.CharField(max_length=4)
+    rkls = models.CharField(max_length=10)
+    yx = models.CharField(max_length=20)
+    gh = models.CharField(max_length=10)
+    sksj = models.CharField(max_length=30)
+
+    class Meta:
+        managed = False
+        db_table = 'c'
+
+
 class DjangoAdminLog(models.Model):
     action_time = models.DateTimeField()
     object_id = models.TextField(blank=True, null=True)
@@ -116,6 +130,24 @@ class DjangoSession(models.Model):
     class Meta:
         managed = False
         db_table = 'django_session'
+
+
+class E(models.Model):
+    id = models.CharField(max_length=30,primary_key=True)
+    xh = models.CharField(max_length=10)
+    kh = models.CharField(max_length=10)
+    km = models.CharField(max_length=20)
+    xf = models.CharField(max_length=4)
+    zpcj = models.CharField(max_length=4)
+    rkls = models.CharField(max_length=10)
+    sksj = models.CharField(max_length=30)
+
+    class Meta:
+        managed = False
+        db_table = 'e'
+
+
+
 
 
 class S(models.Model):
