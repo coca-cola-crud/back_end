@@ -55,31 +55,33 @@ def listselectedcourse(request):
 
 #选课
 def selectcourse(request):
-    #请求消息带课程的信息课号，课名，学分，教师
-    selectinfo = request.params['data']
+    #获取请求信息里的课程号
+    select_kh = request.params['selectkh']
+    #根据课程号在C表中获得课程信息
+    selectinfo = C.objects.get(kh=select_kh)
+
     curStudent = S.objects.get(xh=request.session['member_id'])
-   # curStudent = S.objects.get(xh='17123011')
-    Id = curStudent.xh + selectinfo['kh']
+    Id = curStudent.xh + selectinfo.kh
     selectedcourse = E.objects.filter(xh=curStudent.xh)
     selectedcourse = list(selectedcourse)
     flag = 0
     for i in selectedcourse:
         print(i.kh,i.sksj)
-        if i.km == selectinfo['km']:
+        if i.km == selectinfo.km:
             flag = 1
             return JsonResponse({'ret': 1, 'msg': f'{i.km}已选，选课失败'})
-        elif i.sksj == selectinfo['sksj']:
+        elif i.sksj == selectinfo.sksj:
             flag = 1
             return JsonResponse({'ret': 1, 'msg': '时间冲突，选课失败'})
     if flag == 0:
         E.objects.create(xh=curStudent.xh,
-                     kh=selectinfo['kh'],
+                     kh=selectinfo.kh,
                      id=Id,
-                     km=selectinfo['km'],
-                     xf=selectinfo['xf'],
-                     sksj=selectinfo['sksj'],
-                     rkls=selectinfo['rkls'],
-                     gh=selectinfo['gh'],
+                     km=selectinfo.km,
+                     xf=selectinfo.xf,
+                     sksj=selectinfo.sksj,
+                     rkls=selectinfo.rkls,
+                     gh=selectinfo.gh,
                      zpcj='')
     return JsonResponse({'ret': 0, 'msg': '选课成功'})
 
