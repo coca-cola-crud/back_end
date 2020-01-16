@@ -58,7 +58,13 @@ def selectcourse(request):
     #获取请求信息里的课程号
     select_kh = request.params['selectkh']
     #根据课程号在C表中获得课程信息
-    selectinfo = C.objects.get(kh=select_kh)
+    try:
+        selectinfo = C.objects.get(kh=select_kh)
+    except C.DoesNotExist:
+        return JsonResponse({
+                'ret': 1,
+                'msg': f'没有课号为{select_kh}的课程'
+        })
 
     curStudent = S.objects.get(xh=request.session['member_id'])
     Id = curStudent.xh + selectinfo.kh
