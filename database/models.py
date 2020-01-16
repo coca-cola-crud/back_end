@@ -140,6 +140,7 @@ class E(models.Model):
     xf = models.CharField(max_length=4)
     zpcj = models.CharField(max_length=4)
     rkls = models.CharField(max_length=10)
+    gh = models.CharField(max_length=10)
     sksj = models.CharField(max_length=30)
 
     class Meta:
