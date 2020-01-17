@@ -65,18 +65,44 @@ def selectcourse(request):
                 'ret': 1,
                 'msg': f'没有课号为{select_kh}的课程'
         })
-
     curStudent = S.objects.get(xh=request.session['member_id'])
     Id = curStudent.xh + selectinfo.kh
     selectedcourse = E.objects.filter(xh=curStudent.xh)
     selectedcourse = list(selectedcourse)
+
     flag = 0
+
     for i in selectedcourse:
+        sametime = 0
         print(i.kh,i.sksj)
+        #判断上课时间是否有重合
+        selectedsksj=i.sksj.split(' ')
+        selectsksj=selectinfo.sksj.split(' ')
+        print(selectsksj,selectedsksj)
+        for x in selectedsksj:
+            for y in selectsksj:
+                xweek=x[0]
+                yweek=y[0]
+                xtime=x[1:].split('-')
+                ytime=y[1:].split('-')
+                if sametime == 0:
+                    if xweek != yweek:
+                        sametime=0
+                        print(sametime,1)
+                    elif int(xtime[1]) < int(ytime[0]) or int(ytime[1]) < int(xtime[0]):
+                        sametime=0
+                        print(sametime, 2)
+                    else:
+                        sametime=1
+                        print(sametime, 3)
+                        break
+                else:
+                    break
+
         if i.km == selectinfo.km:
             flag = 1
             return JsonResponse({'ret': 1, 'msg': f'{i.km}已选，选课失败'})
-        elif i.sksj == selectinfo.sksj:
+        elif sametime:
             flag = 1
             return JsonResponse({'ret': 1, 'msg': '时间冲突，选课失败'})
     if flag == 0:

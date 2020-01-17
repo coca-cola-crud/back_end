@@ -90,7 +90,29 @@
       <recent name="D:\test\HelloWorld\teacher" />
     </key>
   </component>
-  <component name="RunManager" selected="Django server.HelloWorld">
+  <component name="RunManager" selected="Python.select_course">
+    <configuration name="select_course" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="HelloWorld" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/student" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/student/select_course.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="settings" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="HelloWorld" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -139,6 +161,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.select_course" />
         <item itemvalue="Python.settings" />
       </list>
     </recent_temporary>
@@ -156,12 +179,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:stugrade@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@6229e18b" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:stugrade@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@5b1d12ae" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@137bb8b9" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
             <select />
@@ -200,7 +218,8 @@
       <workItem from="1579152614566" duration="6999000" />
       <workItem from="1579170188633" duration="517000" />
       <workItem from="1579170803791" duration="2784000" />
-      <workItem from="1579184341435" duration="288000" />
+      <workItem from="1579184341435" duration="1148000" />
+      <workItem from="1579230891935" duration="4807000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1578919692600</created>
@@ -237,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579173425977</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Initial commit">
+      <created>1579184653733</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1579184653733</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -324,10 +350,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="233" y="3" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1579003838352" />
-    <state x="58" y="0" key="CommitChangelistDialog2" timestamp="1579173423395">
+    <state x="58" y="0" key="CommitChangelistDialog2" timestamp="1579235876976">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="58" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1579173423395" />
+    <state x="58" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1579235876976" />
     <state x="93" y="93" width="1095" height="495" key="DiffContextDialog" timestamp="1579159324897">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -344,22 +370,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="425" y="52" key="Github.UntrackedFilesDialog/0.0.1280.680@0.0.1280.680" timestamp="1578917704411" />
-    <state width="617" height="144" key="GridCell.Tab.0.bottom" timestamp="1579173769485">
+    <state width="617" height="259" key="GridCell.Tab.0.bottom" timestamp="1579235730309">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="617" height="144" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1579173769485" />
-    <state width="617" height="144" key="GridCell.Tab.0.center" timestamp="1579173769485">
+    <state width="617" height="259" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1579235730309" />
+    <state width="617" height="259" key="GridCell.Tab.0.center" timestamp="1579235730309">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="617" height="144" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1579173769485" />
-    <state width="617" height="144" key="GridCell.Tab.0.left" timestamp="1579173769485">
+    <state width="617" height="259" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1579235730309" />
+    <state width="617" height="259" key="GridCell.Tab.0.left" timestamp="1579235730309">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="617" height="144" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1579173769485" />
-    <state width="617" height="144" key="GridCell.Tab.0.right" timestamp="1579173769485">
+    <state width="617" height="259" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1579235730309" />
+    <state width="617" height="259" key="GridCell.Tab.0.right" timestamp="1579235730309">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="617" height="144" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1579173769485" />
+    <state width="617" height="259" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1579235730309" />
     <state width="218" height="477" key="HiddenNamespacesPopup" timestamp="1579004117418">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -372,10 +398,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="177" y="0" width="943" height="680" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1578919155074" />
-    <state x="233" y="77" key="Vcs.Push.Dialog.v2" timestamp="1579173438964">
+    <state x="233" y="77" key="Vcs.Push.Dialog.v2" timestamp="1579235891178">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="77" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1579173438964" />
+    <state x="233" y="77" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1579235891178" />
     <state x="539" y="234" width="331" height="226" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1579077543487">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -392,10 +418,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="537" y="2" width="580" height="678" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1280.680@0.0.1280.680" timestamp="1579157948653" />
-    <state x="536" y="157" key="com.intellij.ide.util.TipDialog" timestamp="1579184346623">
+    <state x="536" y="157" key="com.intellij.ide.util.TipDialog" timestamp="1579230900751">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="536" y="157" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1579184346623" />
+    <state x="536" y="157" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1579230900751" />
     <state x="751" y="262" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579170651142">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
