@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f11e6f8a-c05c-4668-8680-052cec6831b9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/teacher/grade_manage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/stu_grade.py" beforeDir="false" afterPath="$PROJECT_DIR$/student/stu_grade.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/teacher/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/teacher/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +83,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Console Font" />
     <property name="settings.editor.splitter.proportion" value="0.24564995" />
   </component>
   <component name="RecentsManager">
@@ -233,7 +234,8 @@
       <workItem from="1579170803791" duration="2784000" />
       <workItem from="1579184341435" duration="1148000" />
       <workItem from="1579230891935" duration="5384000" />
-      <workItem from="1579498049982" duration="2658000" />
+      <workItem from="1579498049982" duration="3097000" />
+      <workItem from="1579502840588" duration="3935000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1578919692600</created>
@@ -291,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579500007810</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Initial commit">
+      <created>1579500722433</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1579500722433</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -378,10 +387,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="233" y="3" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1579003838352" />
-    <state x="58" y="0" key="CommitChangelistDialog2" timestamp="1579500004858">
+    <state x="58" y="0" key="CommitChangelistDialog2" timestamp="1579500719195">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="58" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1579500004858" />
+    <state x="58" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1579500719195" />
     <state x="93" y="93" width="1095" height="495" key="DiffContextDialog" timestamp="1579159324897">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -398,22 +407,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="425" y="52" key="Github.UntrackedFilesDialog/0.0.1280.680@0.0.1280.680" timestamp="1578917704411" />
-    <state width="1237" height="137" key="GridCell.Tab.0.bottom" timestamp="1579500183084">
+    <state width="1237" height="137" key="GridCell.Tab.0.bottom" timestamp="1579501151104">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="137" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1579500183084" />
-    <state width="1237" height="137" key="GridCell.Tab.0.center" timestamp="1579500183084">
+    <state width="1237" height="137" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1579501151104" />
+    <state width="1237" height="137" key="GridCell.Tab.0.center" timestamp="1579501151104">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="137" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1579500183084" />
-    <state width="1237" height="137" key="GridCell.Tab.0.left" timestamp="1579500183084">
+    <state width="1237" height="137" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1579501151104" />
+    <state width="1237" height="137" key="GridCell.Tab.0.left" timestamp="1579501151104">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="137" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1579500183084" />
-    <state width="1237" height="137" key="GridCell.Tab.0.right" timestamp="1579500183084">
+    <state width="1237" height="137" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1579501151104" />
+    <state width="1237" height="137" key="GridCell.Tab.0.right" timestamp="1579501151104">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="137" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1579500183084" />
+    <state width="1237" height="137" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1579501151104" />
     <state width="218" height="477" key="HiddenNamespacesPopup" timestamp="1579004117418">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -422,14 +431,14 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="202" y="66" key="RollbackChangesDialog/0.0.1280.680@0.0.1280.680" timestamp="1578922914821" />
-    <state x="177" y="0" width="943" height="680" key="SettingsEditor" timestamp="1579500626991">
+    <state x="177" y="0" width="943" height="680" key="SettingsEditor" timestamp="1579501107897">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="177" y="0" width="943" height="680" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1579500626991" />
-    <state x="233" y="77" key="Vcs.Push.Dialog.v2" timestamp="1579500024326">
+    <state x="177" y="0" width="943" height="680" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1579501107897" />
+    <state x="233" y="77" key="Vcs.Push.Dialog.v2" timestamp="1579500732909">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="77" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1579500024326" />
+    <state x="233" y="77" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1579500732909" />
     <state x="539" y="234" width="331" height="226" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1579077543487">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -446,10 +455,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="537" y="2" width="580" height="678" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1280.680@0.0.1280.680" timestamp="1579157948653" />
-    <state x="536" y="157" key="com.intellij.ide.util.TipDialog" timestamp="1579498057609">
+    <state x="536" y="157" key="com.intellij.ide.util.TipDialog" timestamp="1579502840616">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="536" y="157" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1579498057609" />
+    <state x="536" y="157" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1579502840616" />
     <state x="751" y="262" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579498186132">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
