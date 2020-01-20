@@ -9,7 +9,7 @@ def listgrade(request):
     retlist=[]
     for i in stucourse:
         retlist.append({
-            'xh':i.kh,
+            'kh':i.kh,
             'km':i.km,
             'xf':i.xf,
             'rkls':i.rkls,

@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f11e6f8a-c05c-4668-8680-052cec6831b9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/select_course.py" beforeDir="false" afterPath="$PROJECT_DIR$/student/select_course.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/student/stu_grade.py" beforeDir="false" afterPath="$PROJECT_DIR$/student/stu_grade.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +82,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
     <property name="settings.editor.splitter.proportion" value="0.24564995" />
   </component>
   <component name="RecentsManager">
@@ -136,6 +135,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="stu_grade" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="HelloWorld" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/student" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/student/stu_grade.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="HelloWorld" type="Python.DjangoServer" factoryName="Django server">
       <module name="HelloWorld" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -162,6 +183,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.stu_grade" />
         <item itemvalue="Python.select_course" />
         <item itemvalue="Python.settings" />
       </list>
@@ -211,7 +233,7 @@
       <workItem from="1579170803791" duration="2784000" />
       <workItem from="1579184341435" duration="1148000" />
       <workItem from="1579230891935" duration="5384000" />
-      <workItem from="1579498049982" duration="1942000" />
+      <workItem from="1579498049982" duration="2658000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1578919692600</created>
@@ -262,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579235898622</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Initial commit">
+      <created>1579500007809</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1579500007810</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,10 +378,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="233" y="3" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1579003838352" />
-    <state x="58" y="0" key="CommitChangelistDialog2" timestamp="1579235896197">
+    <state x="58" y="0" key="CommitChangelistDialog2" timestamp="1579500004858">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="58" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1579235896197" />
+    <state x="58" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1579500004858" />
     <state x="93" y="93" width="1095" height="495" key="DiffContextDialog" timestamp="1579159324897">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -369,22 +398,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="425" y="52" key="Github.UntrackedFilesDialog/0.0.1280.680@0.0.1280.680" timestamp="1578917704411" />
-    <state width="845" height="160" key="GridCell.Tab.0.bottom" timestamp="1579498770868">
+    <state width="1237" height="137" key="GridCell.Tab.0.bottom" timestamp="1579500183084">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="845" height="160" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1579498770868" />
-    <state width="845" height="160" key="GridCell.Tab.0.center" timestamp="1579498770868">
+    <state width="1237" height="137" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1579500183084" />
+    <state width="1237" height="137" key="GridCell.Tab.0.center" timestamp="1579500183084">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="845" height="160" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1579498770868" />
-    <state width="845" height="160" key="GridCell.Tab.0.left" timestamp="1579498770868">
+    <state width="1237" height="137" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1579500183084" />
+    <state width="1237" height="137" key="GridCell.Tab.0.left" timestamp="1579500183084">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="845" height="160" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1579498770868" />
-    <state width="845" height="160" key="GridCell.Tab.0.right" timestamp="1579498770868">
+    <state width="1237" height="137" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1579500183084" />
+    <state width="1237" height="137" key="GridCell.Tab.0.right" timestamp="1579500183084">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="845" height="160" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1579498770868" />
+    <state width="1237" height="137" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1579500183084" />
     <state width="218" height="477" key="HiddenNamespacesPopup" timestamp="1579004117418">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -393,14 +422,14 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="202" y="66" key="RollbackChangesDialog/0.0.1280.680@0.0.1280.680" timestamp="1578922914821" />
-    <state x="177" y="0" width="943" height="680" key="SettingsEditor" timestamp="1578919155074">
+    <state x="177" y="0" width="943" height="680" key="SettingsEditor" timestamp="1579500626991">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="177" y="0" width="943" height="680" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1578919155074" />
-    <state x="233" y="77" key="Vcs.Push.Dialog.v2" timestamp="1579235906729">
+    <state x="177" y="0" width="943" height="680" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1579500626991" />
+    <state x="233" y="77" key="Vcs.Push.Dialog.v2" timestamp="1579500024326">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="77" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1579235906729" />
+    <state x="233" y="77" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1579500024326" />
     <state x="539" y="234" width="331" height="226" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1579077543487">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -425,6 +454,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="751" y="262" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1579498186132" />
+    <state x="332" y="198" width="669" height="284" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1579500600379">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="332" y="198" width="669" height="284" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1280.680@0.0.1280.680" timestamp="1579500600379" />
     <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1579498142425">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -433,5 +466,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/HelloWorld$select_course.coverage" NAME="select_course Coverage Results" MODIFIED="1579498166196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/student" />
     <SUITE FILE_PATH="coverage/HelloWorld$settings.coverage" NAME="settings Coverage Results" MODIFIED="1578654639478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HelloWorld" />
+    <SUITE FILE_PATH="coverage/HelloWorld$stu_grade.coverage" NAME="stu_grade Coverage Results" MODIFIED="1579500173565" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/student" />
   </component>
 </project>
