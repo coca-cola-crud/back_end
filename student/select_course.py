@@ -114,7 +114,7 @@ def selectcourse(request):
                      sksj=selectinfo.sksj,
                      rkls=selectinfo.rkls,
                      gh=selectinfo.gh,
-                     zpcj='')
+                     zpcj="NULL")
     return JsonResponse({'ret': 0, 'msg': '选课成功'})
 
 
