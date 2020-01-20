@@ -17,6 +17,8 @@ def dispatcher(request):
         return listmycourse(request)
     elif action == 'list_students':
         return liststudents(request)
+    elif action == 'post_grade':
+        return postgrade(request)
     else:
         return JsonResponse({'ret': 1, 'msg': '不支持该类型http请求'})
 
@@ -30,9 +32,11 @@ def listmycourse(request):
         retlist.append({
             'kh': i.kh,
             'km': i.km,
+
         })
     return JsonResponse({'ret': 0, 'retlist': retlist})
 
+#列出选择某课的学生
 def liststudents(request):
     courseId = request.params['kh']
     curTeacher = T.objects.get(gh=request.session['member_id'])
@@ -45,5 +49,24 @@ def liststudents(request):
         retlist.append({
             'xh': i.xh,
             'xm': stuname,
+            'zpcj': i.zpcj
         })
     return JsonResponse({'ret': 0, 'retlist': retlist})
+
+#录入修改成绩
+def postgrade(request):
+    studentId = request.params['xh']
+    courseId = request.params['kh']
+    curTeacher = T.objects.get(gh=request.session['member_id'])
+    student = E.objects.get(kh=courseId, xh=studentId,gh=curTeacher.gh)
+    try:
+        zpcj=int(request.params['zpcj'])
+    except ValueError:
+        return JsonResponse({'ret': 1, 'msg': '请输入数字'})
+
+    if(zpcj<=100 and zpcj>=0):
+        student.zpcj = request.params['zpcj']
+        student.save()
+        return JsonResponse({'ret': 0, 'msg': '成绩录入/修改成功'})
+    else:
+        return JsonResponse({'ret': 1, 'msg': '成绩录入/修改失败'})
