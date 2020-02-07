@@ -19,6 +19,8 @@ def dispatcher(request):
         return liststudents(request)
     elif action == 'post_grade':
         return postgrade(request)
+    elif action == 'grade_distribution':
+        return gradeDistribution(request)
     else:
         return JsonResponse({'ret': 1, 'msg': '不支持该类型http请求'})
 
@@ -60,7 +62,7 @@ def postgrade(request):
     curTeacher = T.objects.get(gh=request.session['member_id'])
     student = E.objects.get(kh=courseId, xh=studentId,gh=curTeacher.gh)
     try:
-        zpcj=int(request.params['zpcj'])
+        zpcj=float(request.params['zpcj'])
     except ValueError:
         return JsonResponse({'ret': 1, 'msg': '请输入数字'})
 
@@ -70,3 +72,37 @@ def postgrade(request):
         return JsonResponse({'ret': 0, 'msg': '成绩录入/修改成功'})
     else:
         return JsonResponse({'ret': 1, 'msg': '成绩录入/修改失败'})
+
+#成绩分布
+def gradeDistribution(request):
+    courseId = request.params['kh']
+    curTeacher = T.objects.get(gh=request.session['member_id'])
+    # 找到选择该老师的课程的学生
+    students = E.objects.filter(kh=courseId,gh=curTeacher.gh)
+    students = list(students)
+    retlist = [0,0,0,0,0,0,0,0,0,0,0]
+    for i in students:
+        zpcj = float(i.zpcj)
+        if zpcj < 60 :
+            retlist[0]+=1
+        elif zpcj <= 63.9 and zpcj >= 60:
+            retlist[1]+=1
+        elif zpcj <= 65.9 and zpcj >= 64:
+            retlist[2]+=1
+        elif zpcj <= 67.9 and zpcj >= 66:
+            retlist[3]+=1
+        elif zpcj <= 71.9 and zpcj >= 68:
+            retlist[4]+=1
+        elif zpcj <= 74.9 and zpcj >= 72:
+            retlist[5]+=1
+        elif zpcj <= 77.9 and zpcj >= 75:
+            retlist[6]+=1
+        elif zpcj <= 81.9 and zpcj >= 78:
+            retlist[7]+=1
+        elif zpcj <= 84.9 and zpcj >= 82:
+            retlist[8]+=1
+        elif zpcj <= 89.9 and zpcj >= 85:
+            retlist[9]+=1
+        elif zpcj <= 100 and zpcj >= 90:
+            retlist[10]+=1
+    return JsonResponse({'retlist': retlist})

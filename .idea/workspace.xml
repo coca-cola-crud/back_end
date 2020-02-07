@@ -236,7 +236,10 @@
       <workItem from="1579498049982" duration="3097000" />
       <workItem from="1579502840588" duration="4383000" />
       <workItem from="1579508269228" duration="481000" />
-      <workItem from="1579511748875" duration="1989000" />
+      <workItem from="1579511748875" duration="3769000" />
+      <workItem from="1579536719847" duration="430000" />
+      <workItem from="1580998124381" duration="431000" />
+      <workItem from="1581055083486" duration="4161000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1578919692600</created>
@@ -308,7 +311,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579506953522</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Initial commit">
+      <created>1579513755797</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1579513755797</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,10 +405,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="233" y="3" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1579003838352" />
-    <state x="58" y="0" key="CommitChangelistDialog2" timestamp="1579506948661">
+    <state x="58" y="0" key="CommitChangelistDialog2" timestamp="1579513753299">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="58" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1579506948661" />
+    <state x="58" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1579513753299" />
     <state x="93" y="93" width="1095" height="495" key="DiffContextDialog" timestamp="1579159324897">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -415,22 +425,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="425" y="52" key="Github.UntrackedFilesDialog/0.0.1280.680@0.0.1280.680" timestamp="1578917704411" />
-    <state width="1237" height="160" key="GridCell.Tab.0.bottom" timestamp="1579507230062">
+    <state width="825" height="274" key="GridCell.Tab.0.bottom" timestamp="1581059044249">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="160" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1579507230062" />
-    <state width="1237" height="160" key="GridCell.Tab.0.center" timestamp="1579507230061">
+    <state width="825" height="274" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1581059044249" />
+    <state width="825" height="274" key="GridCell.Tab.0.center" timestamp="1581059044248">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="160" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1579507230061" />
-    <state width="1237" height="160" key="GridCell.Tab.0.left" timestamp="1579507230061">
+    <state width="825" height="274" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1581059044248" />
+    <state width="825" height="274" key="GridCell.Tab.0.left" timestamp="1581059044247">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="160" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1579507230061" />
-    <state width="1237" height="160" key="GridCell.Tab.0.right" timestamp="1579507230062">
+    <state width="825" height="274" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1581059044247" />
+    <state width="825" height="274" key="GridCell.Tab.0.right" timestamp="1581059044249">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="160" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1579507230062" />
+    <state width="825" height="274" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1581059044249" />
     <state width="218" height="477" key="HiddenNamespacesPopup" timestamp="1579004117418">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -443,10 +453,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="177" y="0" width="943" height="680" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1579501107897" />
-    <state x="233" y="77" key="Vcs.Push.Dialog.v2" timestamp="1579506968653">
+    <state x="233" y="77" key="Vcs.Push.Dialog.v2" timestamp="1579513766828">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="77" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1579506968653" />
+    <state x="233" y="77" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1579513766828" />
     <state x="539" y="234" width="331" height="226" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1579077543487">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -463,10 +473,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="537" y="2" width="580" height="678" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1280.680@0.0.1280.680" timestamp="1579157948653" />
-    <state x="536" y="157" key="com.intellij.ide.util.TipDialog" timestamp="1579511750118">
+    <state x="536" y="157" key="com.intellij.ide.util.TipDialog" timestamp="1581055085670">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="536" y="157" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1579511750118" />
+    <state x="536" y="157" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1581055085670" />
     <state x="751" y="262" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579498186132">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
