@@ -82,27 +82,28 @@ def gradeDistribution(request):
     students = list(students)
     retlist = [0,0,0,0,0,0,0,0,0,0,0]
     for i in students:
-        zpcj = float(i.zpcj)
-        if zpcj < 60 :
-            retlist[0]+=1
-        elif zpcj <= 63.9 and zpcj >= 60:
-            retlist[1]+=1
-        elif zpcj <= 65.9 and zpcj >= 64:
-            retlist[2]+=1
-        elif zpcj <= 67.9 and zpcj >= 66:
-            retlist[3]+=1
-        elif zpcj <= 71.9 and zpcj >= 68:
-            retlist[4]+=1
-        elif zpcj <= 74.9 and zpcj >= 72:
-            retlist[5]+=1
-        elif zpcj <= 77.9 and zpcj >= 75:
-            retlist[6]+=1
-        elif zpcj <= 81.9 and zpcj >= 78:
-            retlist[7]+=1
-        elif zpcj <= 84.9 and zpcj >= 82:
-            retlist[8]+=1
-        elif zpcj <= 89.9 and zpcj >= 85:
-            retlist[9]+=1
-        elif zpcj <= 100 and zpcj >= 90:
-            retlist[10]+=1
+        if i.zpcj != "NULL":
+            zpcj = float(i.zpcj)
+            if zpcj < 60:
+                retlist[0] += 1
+            elif zpcj <= 63.9 and zpcj >= 60:
+                retlist[1] += 1
+            elif zpcj <= 65.9 and zpcj >= 64:
+                retlist[2] += 1
+            elif zpcj <= 67.9 and zpcj >= 66:
+                retlist[3] += 1
+            elif zpcj <= 71.9 and zpcj >= 68:
+                retlist[4] += 1
+            elif zpcj <= 74.9 and zpcj >= 72:
+                retlist[5] += 1
+            elif zpcj <= 77.9 and zpcj >= 75:
+                retlist[6] += 1
+            elif zpcj <= 81.9 and zpcj >= 78:
+                retlist[7] += 1
+            elif zpcj <= 84.9 and zpcj >= 82:
+                retlist[8] += 1
+            elif zpcj <= 89.9 and zpcj >= 85:
+                retlist[9] += 1
+            elif zpcj <= 100 and zpcj >= 90:
+                retlist[10] += 1
     return JsonResponse({'retlist': retlist})
