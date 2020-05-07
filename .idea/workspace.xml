@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f11e6f8a-c05c-4668-8680-052cec6831b9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/admin/course_info.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/sign_in_out.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/student_info.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/teacher_info.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teacher/grade_manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/teacher/grade_manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloWorld/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/HelloWorld/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/database/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student/personal_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/student/personal_info.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student/select_course.py" beforeDir="false" afterPath="$PROJECT_DIR$/student/select_course.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,18 +83,19 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/bysms" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/admin" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Console Font" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
     <property name="settings.editor.splitter.proportion" value="0.24564995" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\test\HelloWorld\admin" />
       <recent name="D:\test\HelloWorld\teacher" />
     </key>
   </component>
@@ -194,7 +203,12 @@
       <list>
         <serviceView>
           <treeState>
-            <expand />
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:stugrade@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
             <select />
           </treeState>
         </serviceView>
@@ -242,7 +256,23 @@
       <workItem from="1581055083486" duration="4373000" />
       <workItem from="1581074720668" duration="1068000" />
       <workItem from="1581086293221" duration="4114000" />
-      <workItem from="1581128726139" duration="1942000" />
+      <workItem from="1581128726139" duration="2109000" />
+      <workItem from="1581602599313" duration="1132000" />
+      <workItem from="1583313093221" duration="5977000" />
+      <workItem from="1583487377241" duration="865000" />
+      <workItem from="1584500363095" duration="3409000" />
+      <workItem from="1584592183230" duration="188000" />
+      <workItem from="1584592497461" duration="9517000" />
+      <workItem from="1584684271876" duration="21000" />
+      <workItem from="1584684319069" duration="327000" />
+      <workItem from="1584684814423" duration="235000" />
+      <workItem from="1584685202256" duration="186000" />
+      <workItem from="1584685507510" duration="5436000" />
+      <workItem from="1584972642893" duration="355000" />
+      <workItem from="1585225120088" duration="2767000" />
+      <workItem from="1585289393468" duration="3200000" />
+      <workItem from="1585717853676" duration="65000" />
+      <workItem from="1588825334022" duration="20144000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1578919692600</created>
@@ -328,7 +358,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581059566509</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Initial commit">
+      <created>1581130775925</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1581130775925</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -411,82 +448,66 @@
     <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="233" y="3" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579003838352">
+    <state x="145" y="77" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588843178009">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="145" y="77" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1588843178009" />
+    <state x="358" y="0" key="#personal_info" timestamp="1584972650265">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="3" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1579003838352" />
-    <state x="58" y="0" key="CommitChangelistDialog2" timestamp="1581059555900">
+    <state x="358" y="0" key="#personal_info/0.0.1280.680@0.0.1280.680" timestamp="1584972650265" />
+    <state x="58" y="0" key="CommitChangelistDialog2" timestamp="1581130773584">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="58" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1581059555900" />
-    <state x="93" y="93" width="1095" height="495" key="DiffContextDialog" timestamp="1579159324897">
+    <state x="58" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1581130773584" />
+    <state width="242" height="189" key="DatabaseViewActions_Filter" timestamp="1584617451122">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="93" y="93" width="1095" height="495" key="DiffContextDialog/0.0.1280.680@0.0.1280.680" timestamp="1579159324897" />
-    <state x="421" y="99" key="FileChooserDialogImpl" timestamp="1578987800290">
+    <state width="242" height="189" key="DatabaseViewActions_Filter/0.0.1280.680@0.0.1280.680" timestamp="1584617451122" />
+    <state x="421" y="99" key="FileChooserDialogImpl" timestamp="1585717915445">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="99" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1578987800290" />
-    <state x="799" y="240" width="270" height="207" key="Github.ShareDialog" timestamp="1578919473162">
+    <state x="421" y="99" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1585717915445" />
+    <state width="1493" height="138" key="GridCell.Tab.0.bottom" timestamp="1588856412477">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="845" height="160" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1585289967941" />
+    <state width="1493" height="138" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588856412477" />
+    <state width="1493" height="138" key="GridCell.Tab.0.center" timestamp="1588856412477">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="845" height="160" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1585289967941" />
+    <state width="1493" height="138" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588856412477" />
+    <state width="1493" height="138" key="GridCell.Tab.0.left" timestamp="1588856412477">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="845" height="160" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1585289967941" />
+    <state width="1493" height="138" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588856412477" />
+    <state width="1493" height="138" key="GridCell.Tab.0.right" timestamp="1588856412477">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="845" height="160" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1585289967941" />
+    <state width="1493" height="138" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588856412477" />
+    <state x="272" y="58" key="SettingsEditor" timestamp="1588856948865">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="272" y="58" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1588856948865" />
+    <state x="233" y="77" key="Vcs.Push.Dialog.v2" timestamp="1581130788222">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="799" y="240" width="270" height="207" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1578919473162" />
-    <state x="425" y="52" key="Github.UntrackedFilesDialog" timestamp="1578917704411">
+    <state x="233" y="77" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1581130788222" />
+    <state x="412" y="0" width="333" height="824" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1588843130850">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="412" y="0" width="333" height="824" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1536.824@0.0.1536.824" timestamp="1588843130850" />
+    <state x="262" y="64" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1588849280499">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="262" y="64" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1588849280499" />
+    <state x="319" y="153" key="com.intellij.ide.util.TipDialog" timestamp="1585717862933">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="425" y="52" key="Github.UntrackedFilesDialog/0.0.1280.680@0.0.1280.680" timestamp="1578917704411" />
-    <state width="1237" height="2" key="GridCell.Tab.0.bottom" timestamp="1581130397128">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="2" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1581130397128" />
-    <state width="1237" height="2" key="GridCell.Tab.0.center" timestamp="1581130397127">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="2" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1581130397127" />
-    <state width="1237" height="2" key="GridCell.Tab.0.left" timestamp="1581130397127">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="2" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1581130397127" />
-    <state width="1237" height="2" key="GridCell.Tab.0.right" timestamp="1581130397127">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="2" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1581130397127" />
-    <state width="218" height="477" key="HiddenNamespacesPopup" timestamp="1579004117418">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="218" height="477" key="HiddenNamespacesPopup/0.0.1280.680@0.0.1280.680" timestamp="1579004117418" />
-    <state x="202" y="66" key="RollbackChangesDialog" timestamp="1578922914821">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="202" y="66" key="RollbackChangesDialog/0.0.1280.680@0.0.1280.680" timestamp="1578922914821" />
-    <state x="177" y="0" width="943" height="680" key="SettingsEditor" timestamp="1579501107897">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="177" y="0" width="943" height="680" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1579501107897" />
-    <state x="233" y="77" key="Vcs.Push.Dialog.v2" timestamp="1581059580346">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="233" y="77" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1581059580346" />
-    <state x="539" y="234" width="331" height="226" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1579077543487">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="539" y="234" width="331" height="226" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1280.680@0.0.1280.680" timestamp="1579077543487" />
-    <state x="371" y="149" key="com.intellij.database.dbimport.ImportUtil.MyDialog" timestamp="1579077160941">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="371" y="149" key="com.intellij.database.dbimport.ImportUtil.MyDialog/0.0.1280.680@0.0.1280.680" timestamp="1579077160941" />
-    <state x="430" y="171" width="421" height="339" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1579071461766">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="430" y="171" width="421" height="339" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1280.680@0.0.1280.680" timestamp="1579071461766" />
-    <state x="537" y="2" width="580" height="678" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1579157948653">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="537" y="2" width="580" height="678" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1280.680@0.0.1280.680" timestamp="1579157948653" />
-    <state x="319" y="153" key="com.intellij.ide.util.TipDialog" timestamp="1581128756390">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="319" y="153" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1581128756390" />
+    <state x="319" y="153" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1585717862933" />
     <state x="751" y="262" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581130372826">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -495,14 +516,17 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="365" y="143" key="git4idea.merge.GitPullDialog/0.0.1280.680@0.0.1280.680" timestamp="1581128931341" />
-    <state x="332" y="198" width="669" height="284" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1579500600379">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="332" y="198" width="669" height="284" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1280.680@0.0.1280.680" timestamp="1579500600379" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1579498142425">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1579498142425" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/database/admin.py</url>
+          <line>4</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/HelloWorld$select_course.coverage" NAME="select_course Coverage Results" MODIFIED="1579498166196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/student" />

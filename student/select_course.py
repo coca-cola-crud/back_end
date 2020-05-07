@@ -31,6 +31,7 @@ def listcourse(request):
     qs = C.objects.values()
     # 将 QuerySet 对象 转化为 list 类型
     # 否则不能 被 转化为 JSON 字符串
+    print(qs)
     retlist = list(qs)
     return JsonResponse({'ret': 0, 'retcourselist': retlist})
 
@@ -71,7 +72,6 @@ def selectcourse(request):
     selectedcourse = list(selectedcourse)
 
     flag = 0
-
     for i in selectedcourse:
         sametime = 0
         print(i.kh,i.sksj)
@@ -88,13 +88,10 @@ def selectcourse(request):
                 if sametime == 0:
                     if xweek != yweek:
                         sametime=0
-                        print(sametime,1)
                     elif int(xtime[1]) < int(ytime[0]) or int(ytime[1]) < int(xtime[0]):
                         sametime=0
-                        print(sametime, 2)
                     else:
                         sametime=1
-                        print(sametime, 3)
                         break
                 else:
                     break
@@ -105,6 +102,7 @@ def selectcourse(request):
         elif sametime:
             flag = 1
             return JsonResponse({'ret': 1, 'msg': '时间冲突，选课失败'})
+
     if flag == 0:
         E.objects.create(xh=curStudent.xh,
                      kh=selectinfo.kh,
@@ -121,10 +119,9 @@ def selectcourse(request):
 #删除一条选课记录
 def deletecourse(request):
     curStudent = S.objects.get(xh=request.session['member_id'])
-    #curStudent = S.objects.get(xh='17123011')
     courseId = request.params['courseid']
     try:
-        # 根据 courseId 从E表中找到相应的选课记录
+        # 根据 courseId，xh 从E表中找到相应的选课记录
         course = E.objects.get(kh=courseId,xh=curStudent.xh)
     except E.DoesNotExist:
         return JsonResponse({

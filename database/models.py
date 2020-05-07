@@ -133,22 +133,19 @@ class DjangoSession(models.Model):
 
 
 class E(models.Model):
-    id = models.CharField(max_length=30,primary_key=True)
     xh = models.CharField(max_length=10)
     kh = models.CharField(max_length=10)
     km = models.CharField(max_length=20)
     xf = models.CharField(max_length=4)
     zpcj = models.CharField(max_length=4)
     rkls = models.CharField(max_length=10)
-    gh = models.CharField(max_length=10)
     sksj = models.CharField(max_length=30)
+    id = models.CharField(primary_key=True, max_length=30)
+    gh = models.CharField(max_length=10)
 
     class Meta:
         managed = False
         db_table = 'e'
-
-
-
 
 
 class S(models.Model):
@@ -157,6 +154,8 @@ class S(models.Model):
     nl = models.CharField(max_length=3)
     xb = models.CharField(max_length=4)
     yx = models.CharField(max_length=20)
+    sjhm = models.CharField(max_length=11, blank=True, null=True)
+    mm = models.CharField(max_length=10, blank=True, null=True)
 
     class Meta:
         managed = False

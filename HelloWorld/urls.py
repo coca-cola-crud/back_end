@@ -26,5 +26,6 @@ urlpatterns = [
     url('admin/', admin.site.urls),
     #url('', TemplateView.as_view(template_name="index.html")),
     url('api/',include('student.urls')),
-    url('api/', include('teacher.urls'))
+    url('api/', include('teacher.urls')),
+    url('api/', include('admin.urls'))
 ]
