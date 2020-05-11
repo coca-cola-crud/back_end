@@ -17,7 +17,7 @@ def signin(request):
             'ret': 1,
             'msg': f'工号为`{teacherId}`的老师不存在'
         })
-    userName = teacher.xm
+    userName = teacher.gh
     # 使用 Django auth 库里面的方法校验用户名、密码
     user = authenticate(username=userName, password=passWord)
     # 如果能找到教师，并且密码正确

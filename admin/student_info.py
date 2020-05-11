@@ -42,19 +42,28 @@ def listStudents(request):
 #添加学生
 def addStudent(request):
     info = request.params['data']
-
-    # 从请求消息中 获取要添加学生的信息
-    # 并且插入到数据库中
-    # 返回值 就是对应插入记录的对象
-    record = S.objects.create(xh=info['xh'] ,
-                            xm=info['xm'] ,
-                            nl=info['nl'],
-                            xb=info['xb'],
-                            yx=info['yx'],
-                            sjhm=info['sjhm'],
-                            mm=info['mm'])
-    User.objects.create_user(username=record.xm, password=record.mm)
-    return JsonResponse({'ret': 0, 'message':'添加成功'})
+    flag = 0
+    qs = S.objects.values()
+    retlist = list(qs)
+    for i in retlist:
+        if i['xh'] == info['xh']:
+            flag = 1
+            break
+    if flag!=0:
+        # 从请求消息中 获取要添加学生的信息
+        # 并且插入到数据库中
+        # 返回值 就是对应插入记录的对象
+        record = S.objects.create(xh=info['xh'] ,
+                                xm=info['xm'] ,
+                                nl=info['nl'],
+                                xb=info['xb'],
+                                yx=info['yx'],
+                                sjhm=info['sjhm'],
+                                mm=info['mm'])
+        User.objects.create_user(username=record.xh, password=record.mm)
+        return JsonResponse({'ret': 0, 'message':'添加成功'})
+    else:
+        return JsonResponse({'ret': 1, 'message': '学号重复'})
 
 
 #删除学生，选课表中该学生选课记录同时删除，使用触发器？

@@ -2,16 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f11e6f8a-c05c-4668-8680-052cec6831b9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/admin/course_info.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/sign_in_out.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/student_info.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/teacher_info.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/personal_info.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloWorld/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/HelloWorld/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/course_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/admin/course_info.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/sign_in_out.py" beforeDir="false" afterPath="$PROJECT_DIR$/admin/sign_in_out.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/student_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/admin/student_info.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/teacher_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/admin/teacher_info.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/admin/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/database/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/database/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/personal_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/student/personal_info.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/select_course.py" beforeDir="false" afterPath="$PROJECT_DIR$/student/select_course.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student/sign_in_out.py" beforeDir="false" afterPath="$PROJECT_DIR$/student/sign_in_out.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/teacher/sign_in_out.py" beforeDir="false" afterPath="$PROJECT_DIR$/teacher/sign_in_out.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -272,7 +273,8 @@
       <workItem from="1585225120088" duration="2767000" />
       <workItem from="1585289393468" duration="3200000" />
       <workItem from="1585717853676" duration="65000" />
-      <workItem from="1588825334022" duration="20144000" />
+      <workItem from="1588825334022" duration="20783000" />
+      <workItem from="1589181082593" duration="15796000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1578919692600</created>
@@ -365,7 +367,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581130775925</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Initial commit">
+      <created>1588859296153</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1588859296153</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -456,10 +465,11 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="358" y="0" key="#personal_info/0.0.1280.680@0.0.1280.680" timestamp="1584972650265" />
-    <state x="58" y="0" key="CommitChangelistDialog2" timestamp="1581130773584">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="70" y="0" key="CommitChangelistDialog2" timestamp="1589207687154">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="58" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1581130773584" />
+    <state x="70" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1589207687153" />
     <state width="242" height="189" key="DatabaseViewActions_Filter" timestamp="1584617451122">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -468,65 +478,61 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="99" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1585717915445" />
-    <state width="1493" height="138" key="GridCell.Tab.0.bottom" timestamp="1588856412477">
+    <state width="744" height="178" key="GridCell.Tab.0.bottom" timestamp="1589205974221">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="845" height="160" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1585289967941" />
-    <state width="1493" height="138" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588856412477" />
-    <state width="1493" height="138" key="GridCell.Tab.0.center" timestamp="1588856412477">
+    <state width="744" height="178" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589205974221" />
+    <state width="744" height="178" key="GridCell.Tab.0.center" timestamp="1589205974221">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="845" height="160" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1585289967941" />
-    <state width="1493" height="138" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588856412477" />
-    <state width="1493" height="138" key="GridCell.Tab.0.left" timestamp="1588856412477">
+    <state width="744" height="178" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589205974221" />
+    <state width="744" height="178" key="GridCell.Tab.0.left" timestamp="1589205974221">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="845" height="160" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1585289967941" />
-    <state width="1493" height="138" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588856412477" />
-    <state width="1493" height="138" key="GridCell.Tab.0.right" timestamp="1588856412477">
+    <state width="744" height="178" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589205974221" />
+    <state width="744" height="178" key="GridCell.Tab.0.right" timestamp="1589205974221">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="845" height="160" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1585289967941" />
-    <state width="1493" height="138" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588856412477" />
+    <state width="744" height="178" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589205974221" />
     <state x="272" y="58" key="SettingsEditor" timestamp="1588856948865">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="272" y="58" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1588856948865" />
-    <state x="233" y="77" key="Vcs.Push.Dialog.v2" timestamp="1581130788222">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="280" y="93" key="Vcs.Push.Dialog.v2" timestamp="1588859402347">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="233" y="77" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1581130788222" />
+    <state x="280" y="93" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1588859402347" />
     <state x="412" y="0" width="333" height="824" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1588843130850">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="412" y="0" width="333" height="824" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1536.824@0.0.1536.824" timestamp="1588843130850" />
-    <state x="262" y="64" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1588849280499">
+    <state x="956" y="122" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1589205968486">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="262" y="64" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1588849280499" />
-    <state x="319" y="153" key="com.intellij.ide.util.TipDialog" timestamp="1585717862933">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="956" y="122" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1589205968486" />
+    <state x="383" y="185" key="com.intellij.ide.util.TipDialog" timestamp="1589181237748">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="319" y="153" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1585717862933" />
-    <state x="751" y="262" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581130372826">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="383" y="185" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1589181237748" />
+    <state x="901" y="317" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589184494894">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="751" y="262" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1581130372826" />
+    <state x="901" y="317" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1589184494894" />
     <state x="365" y="143" key="git4idea.merge.GitPullDialog" timestamp="1581128931341">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="365" y="143" key="git4idea.merge.GitPullDialog/0.0.1280.680@0.0.1280.680" timestamp="1581128931341" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/database/admin.py</url>
-          <line>4</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1589201096912">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1589201096912" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/HelloWorld$select_course.coverage" NAME="select_course Coverage Results" MODIFIED="1579498166196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/student" />

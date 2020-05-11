@@ -8,6 +8,18 @@
 from django.db import models
 
 
+class A(models.Model):
+    xm = models.CharField(max_length=20, blank=True, null=True)
+    gh = models.CharField(primary_key=True, max_length=10)
+    sjhm = models.CharField(max_length=11, blank=True, null=True)
+    yxdz = models.CharField(max_length=20, blank=True, null=True)
+    xb = models.CharField(max_length=10, blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'a'
+
+
 class AuthGroup(models.Model):
     name = models.CharField(unique=True, max_length=80)
 
@@ -168,6 +180,8 @@ class T(models.Model):
     xb = models.CharField(max_length=6)
     xl = models.CharField(max_length=10)
     yx = models.CharField(max_length=20)
+    sjhm = models.CharField(max_length=11, blank=True, null=True)
+    mm = models.CharField(max_length=20, blank=True, null=True)
 
     class Meta:
         managed = False
