@@ -199,11 +199,6 @@
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:stugrade@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:stugrade@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@7a8832cb" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
             </expand>
             <select />
           </treeState>
@@ -269,7 +264,7 @@
       <workItem from="1585289393468" duration="3200000" />
       <workItem from="1585717853676" duration="65000" />
       <workItem from="1588825334022" duration="20783000" />
-      <workItem from="1589181082593" duration="16150000" />
+      <workItem from="1589181082593" duration="16597000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1578919692600</created>
@@ -376,11 +371,35 @@
       <option name="project" value="LOCAL" />
       <updated>1589207691144</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Initial commit">
+      <created>1589208040689</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1589208040689</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Initial commit">
+      <created>1589208176614</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1589208176614</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -467,15 +486,19 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="358" y="0" key="#personal_info/0.0.1280.680@0.0.1280.680" timestamp="1584972650265" />
-    <state x="70" y="0" key="CommitChangelistDialog2" timestamp="1589208037115">
+    <state x="70" y="0" key="CommitChangelistDialog2" timestamp="1589209434284">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="58" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1581130773584" />
-    <state x="70" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1589208037115" />
+    <state x="70" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1589209434284" />
     <state width="242" height="189" key="DatabaseViewActions_Filter" timestamp="1584617451122">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="242" height="189" key="DatabaseViewActions_Filter/0.0.1280.680@0.0.1280.680" timestamp="1584617451122" />
+    <state x="66" y="15" key="DiffContextDialog" timestamp="1589209466261">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="66" y="15" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1589209466261" />
     <state x="421" y="99" key="FileChooserDialogImpl" timestamp="1585717915445">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -504,11 +527,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="272" y="58" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1588856948865" />
-    <state x="280" y="93" key="Vcs.Push.Dialog.v2" timestamp="1589208142610">
+    <state x="280" y="93" key="Vcs.Push.Dialog.v2" timestamp="1589209487570">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="233" y="77" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1581130788222" />
-    <state x="280" y="93" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1589208142610" />
+    <state x="280" y="93" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1589209487570" />
     <state x="412" y="0" width="333" height="824" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1588843130850">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -517,16 +540,16 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="956" y="122" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1589205968486" />
-    <state x="383" y="185" key="com.intellij.ide.util.TipDialog" timestamp="1589181237748">
+    <state x="383" y="185" key="com.intellij.ide.util.TipDialog" timestamp="1589209363083">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="319" y="153" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1585717862933" />
-    <state x="383" y="185" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1589181237748" />
-    <state x="901" y="317" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589184494894">
+    <state x="383" y="185" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1589209363083" />
+    <state x="901" y="317" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589209505706">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="751" y="262" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1581130372826" />
-    <state x="901" y="317" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1589184494894" />
+    <state x="901" y="317" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1589209505706" />
     <state x="365" y="143" key="git4idea.merge.GitPullDialog" timestamp="1581128931341">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
