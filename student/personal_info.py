@@ -4,12 +4,7 @@ from django.db import connection
 from database.models import S
 
 def list_info(request):
-        Xh = request.session['member_id']
-        cursor = connection.cursor()
-        cursor.execute("select * from S where xh=%s", [Xh])
-        student = cursor.fetchall()
-        return JsonResponse({'xm':student[0][1],
-                             'xh': student[0][0],
-                             'nl':student[0][2],
-                             'xb': student[0][3],
-                             'yx': student[0][4]})
+    print(request.session['member_id'])
+    student = S.objects.get(xh=request.session['member_id'])
+    # print(teacher.xm)
+    return JsonResponse({'xm': student.xm, 'xh': student.xh, 'xb': student.xb, 'nl': student.nl, 'yx': student.yx,'sjhm':student.sjhm})
