@@ -87,16 +87,8 @@ def addCourse(request):
 
 #C表删除课程，E表中该教师开课记录同时删除，使用触发器？
 def delCourse(request):
-    curStudent = S.objects.get(xh=request.session['member_id'])
-    courseId = request.params['courseid']
-    try:
-        # 根据 courseId，xh 从E表中找到相应的选课记录
-        course = E.objects.get(kh=courseId, xh=curStudent.xh)
-    except E.DoesNotExist:
-        return JsonResponse({
-            'ret': 1,
-            'msg': f'未选课号为{courseId}的课程'
-        })
+    courseid = request.params['courseid']
+    course = C.objects.get(kh=courseid)
     # delete 方法就将该记录从数据库中删除了
     course.delete()
     return JsonResponse({'ret': 0, 'msg': '删除成功'})

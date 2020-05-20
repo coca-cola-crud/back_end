@@ -49,7 +49,7 @@ def addStudent(request):
         if i['xh'] == info['xh']:
             flag = 1
             break
-    if flag!=0:
+    if flag==0:
         # 从请求消息中 获取要添加学生的信息
         # 并且插入到数据库中
         # 返回值 就是对应插入记录的对象
@@ -61,6 +61,7 @@ def addStudent(request):
                                 sjhm=info['sjhm'],
                                 mm=info['mm'])
         User.objects.create_user(username=record.xh, password=record.mm)
+
         return JsonResponse({'ret': 0, 'message':'添加成功'})
     else:
         return JsonResponse({'ret': 1, 'message': '学号重复'})
@@ -68,18 +69,12 @@ def addStudent(request):
 
 #删除学生，选课表中该学生选课记录同时删除，使用触发器？
 def delStudent(request):
-    curStudent = S.objects.get(xh=request.session['member_id'])
-    courseId = request.params['courseid']
-    try:
-        # 根据 courseId，xh 从E表中找到相应的选课记录
-        course = E.objects.get(kh=courseId, xh=curStudent.xh)
-    except E.DoesNotExist:
-        return JsonResponse({
-            'ret': 1,
-            'msg': f'未选课号为{courseId}的课程'
-        })
+    studentid = request.params['studentid']
+    student = S.objects.get(xh=studentid)
+
     # delete 方法就将该记录从数据库中删除了
-    course.delete()
+    student.delete()
+    User.objects.get(username=studentid).delete()
     return JsonResponse({'ret': 0, 'msg': '删除成功'})
 
 
