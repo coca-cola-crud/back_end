@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f11e6f8a-c05c-4668-8680-052cec6831b9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/student/password.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/course_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/admin/course_info.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/student_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/admin/student_info.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/teacher_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/admin/teacher_info.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/database/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/student/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,27 +197,7 @@
       <list>
         <serviceView>
           <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:stugrade@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:stugrade@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@395eff9f" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:stugrade@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@1b157f19" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:stugrade@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@639fb212" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </treeState>
         </serviceView>
@@ -287,7 +266,8 @@
       <workItem from="1589209341195" duration="1538000" />
       <workItem from="1589256214251" duration="2927000" />
       <workItem from="1589876571919" duration="679000" />
-      <workItem from="1589933510110" duration="9322000" />
+      <workItem from="1589933510110" duration="10034000" />
+      <workItem from="1590244398499" duration="1895000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1578919692600</created>
@@ -422,7 +402,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589258214230</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Initial commit">
+      <created>1589978081028</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1589978081028</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -523,10 +510,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="358" y="0" key="#personal_info/0.0.1280.680@0.0.1280.680" timestamp="1584972650265" />
-    <state x="70" y="0" key="CommitChangelistDialog2" timestamp="1589258211967">
+    <state x="70" y="0" key="CommitChangelistDialog2" timestamp="1589978078194">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="70" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1589258211967" />
+    <state x="70" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1589978078194" />
     <state width="242" height="189" key="DatabaseViewActions_Filter" timestamp="1584617451122">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -539,34 +526,50 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="99" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1585717915445" />
-    <state width="1493" height="239" key="GridCell.Tab.0.bottom" timestamp="1589878263982">
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1590245425654">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="845" height="160" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1585289967941" />
-    <state width="1493" height="239" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589878263982" />
-    <state width="1493" height="239" key="GridCell.Tab.0.center" timestamp="1589878263981">
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590245425654" />
+    <state width="1493" height="261" key="GridCell.Tab.0.center" timestamp="1590245425653">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="845" height="160" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1585289967941" />
-    <state width="1493" height="239" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589878263981" />
-    <state width="1493" height="239" key="GridCell.Tab.0.left" timestamp="1589878263981">
+    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590245425653" />
+    <state width="1493" height="261" key="GridCell.Tab.0.left" timestamp="1590245425653">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="845" height="160" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1585289967941" />
-    <state width="1493" height="239" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589878263981" />
-    <state width="1493" height="239" key="GridCell.Tab.0.right" timestamp="1589878263981">
+    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590245425653" />
+    <state width="1493" height="261" key="GridCell.Tab.0.right" timestamp="1590245425654">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="845" height="160" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1585289967941" />
-    <state width="1493" height="239" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589878263981" />
+    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590245425654" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1590245425654">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590245425654" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1590245425654">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1590245425654" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1590245425654">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1590245425654" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1590245425654">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1590245425654" />
     <state x="272" y="58" key="SettingsEditor" timestamp="1588856948865">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="272" y="58" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1588856948865" />
-    <state x="280" y="93" key="Vcs.Push.Dialog.v2" timestamp="1589258224588">
+    <state x="280" y="93" key="Vcs.Push.Dialog.v2" timestamp="1589978092578">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="280" y="93" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1589258224588" />
+    <state x="280" y="93" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1589978092578" />
     <state x="412" y="0" width="333" height="824" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1588843130850">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -579,11 +582,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="956" y="122" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1589205968486" />
-    <state x="383" y="185" key="com.intellij.ide.util.TipDialog" timestamp="1589933511211">
+    <state x="383" y="185" key="com.intellij.ide.util.TipDialog" timestamp="1590244398418">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="319" y="153" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1585717862933" />
-    <state x="383" y="185" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1589933511211" />
+    <state x="383" y="185" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1590244398418" />
     <state x="901" y="317" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589209505706">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

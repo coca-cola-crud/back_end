@@ -188,6 +188,7 @@ class T(models.Model):
     class Meta:
         managed = False
         db_table = 't'
+
  # noinspection PyUnusedLocal
 @receiver(pre_delete, sender=S)
 def pre_delete_student(sender, instance, **kwargs):
