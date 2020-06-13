@@ -97,14 +97,14 @@ def alterInfo(request):
     if 'xl' in newdata:
         print(newdata['xl'])
         teacher.xl = newdata['xl']
-    if 'phone' in newdata:
-        teacher.sjhm = newdata['phone']
-    if 'name' in newdata:
-        teacher.xm = newdata['name']
-    if 'sex' in newdata:
-        teacher.xb = newdata['sex']
-    if 'major' in newdata:
-        teacher.yx = newdata['major']
+    if 'sjhm' in newdata:
+        teacher.sjhm = newdata['sjhm']
+    if 'xm' in newdata:
+        teacher.xm = newdata['xm']
+    if 'xb' in newdata:
+        teacher.xb = newdata['xb']
+    if 'yx' in newdata:
+        teacher.yx = newdata['yx']
 
     # 注意，一定要执行save才能将修改信息保存到数据库
 

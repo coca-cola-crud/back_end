@@ -95,17 +95,17 @@ def alterInfo(request):
             'msg': f'id 为`{studentid}`的学生不存在'
         }
 
-    if 'age' in newdata:
-        print(newdata['age'])
-        student.nl = newdata['age']
-    if 'phone' in newdata:
-        student.sjhm = newdata['phone']
-    if 'name' in newdata:
-        student.xm = newdata['name']
-    if 'sex' in newdata:
-        student.xb = newdata['sex']
-    if 'major' in newdata:
-        student.yx = newdata['major']
+    if 'nl' in newdata:
+        print(newdata['nl'])
+        student.nl = newdata['nl']
+    if 'sjhm' in newdata:
+        student.sjhm = newdata['sjhm']
+    if 'xm' in newdata:
+        student.xm = newdata['xm']
+    if 'xb' in newdata:
+        student.xb = newdata['xb']
+    if 'yx' in newdata:
+        student.yx = newdata['yx']
 
     # 注意，一定要执行save才能将修改信息保存到数据库
 

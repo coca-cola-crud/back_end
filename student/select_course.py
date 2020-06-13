@@ -33,6 +33,12 @@ def listcourse(request):
     # 否则不能 被 转化为 JSON 字符串
     print(qs)
     retlist = list(qs)
+    print(retlist)
+    for i in retlist:
+        courseid=i['kh']
+        course = C.objects.get(kh=courseid)
+        course.rs = xknum(courseid)
+        course.save()
     return JsonResponse({'ret': 0, 'retcourselist': retlist})
 
 #列出已选课程
@@ -113,8 +119,14 @@ def selectcourse(request):
                      rkls=selectinfo.rkls,
                      gh=selectinfo.gh,
                      zpcj="NULL")
-    return JsonResponse({'ret': 0, 'msg': '选课成功'})
+        courseid=selectinfo.kh
+        course = C.objects.get(kh=courseid)
+        course.rs = xknum(courseid)
+        course.save()
 
+
+
+    return JsonResponse({'ret': 0, 'msg': '选课成功'})
 
 #删除一条选课记录
 def deletecourse(request):
@@ -130,4 +142,18 @@ def deletecourse(request):
         })
     # delete 方法就将该记录从数据库中删除了
     course.delete()
+
+    course = C.objects.get(kh=courseId)
+    course.rs = xknum(courseId)
+    course.save()
     return JsonResponse({'ret': 0,'msg':'删除成功'})
+
+
+def xknum(courseid):
+    qs=E.objects.filter(kh=courseid)
+    count = 0
+    qs=list(qs)
+    for i in qs:
+        count+=1
+    print(count)
+    return count
