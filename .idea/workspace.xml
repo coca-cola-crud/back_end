@@ -553,10 +553,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="358" y="0" key="#personal_info/0.0.1280.680@0.0.1280.680" timestamp="1584972650265" />
-    <state x="70" y="0" key="CommitChangelistDialog2" timestamp="1592190917190">
+    <state x="70" y="0" key="CommitChangelistDialog2" timestamp="1592196770720">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="70" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1592190917190" />
+    <state x="70" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1592196770720" />
     <state width="242" height="189" key="DatabaseViewActions_Filter" timestamp="1584617451122">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -569,26 +569,26 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="99" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1585717915445" />
-    <state width="1493" height="255" key="GridCell.Tab.0.bottom" timestamp="1592191379929">
+    <state width="1493" height="490" key="GridCell.Tab.0.bottom" timestamp="1592196835150">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="845" height="160" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1585289967941" />
-    <state width="1493" height="255" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592191379929" />
-    <state width="1493" height="255" key="GridCell.Tab.0.center" timestamp="1592191379928">
+    <state width="1493" height="490" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592196835150" />
+    <state width="1493" height="490" key="GridCell.Tab.0.center" timestamp="1592196835150">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="845" height="160" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1585289967941" />
-    <state width="1493" height="255" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1592191379928" />
-    <state width="1493" height="255" key="GridCell.Tab.0.left" timestamp="1592191379928">
+    <state width="1493" height="490" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1592196835150" />
+    <state width="1493" height="490" key="GridCell.Tab.0.left" timestamp="1592196835150">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="845" height="160" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1585289967941" />
-    <state width="1493" height="255" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1592191379928" />
-    <state width="1493" height="255" key="GridCell.Tab.0.right" timestamp="1592191379928">
+    <state width="1493" height="490" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1592196835150" />
+    <state width="1493" height="490" key="GridCell.Tab.0.right" timestamp="1592196835150">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="845" height="160" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1585289967941" />
-    <state width="1493" height="255" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1592191379928" />
+    <state width="1493" height="490" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1592196835150" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1590246441812">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -613,10 +613,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="490" y="154" width="540" height="524" key="StructurePopup/0.0.1536.824@0.0.1536.824" timestamp="1592112152283" />
-    <state x="280" y="93" key="Vcs.Push.Dialog.v2" timestamp="1592191371642">
+    <state x="280" y="93" key="Vcs.Push.Dialog.v2" timestamp="1592196845274">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="280" y="93" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1592191371642" />
+    <state x="280" y="93" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1592196845274" />
     <state x="412" y="0" width="333" height="824" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1588843130850">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
