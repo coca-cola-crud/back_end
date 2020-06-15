@@ -57,6 +57,7 @@ def listselectedcourse(request):
         for j in Clist:
             if j['kh'] == i.kh and j['gh'] == i.gh:
                 retlist.append(j)
+    print(retlist)
     return JsonResponse({'ret': 0, 'retlist': retlist})
 
 

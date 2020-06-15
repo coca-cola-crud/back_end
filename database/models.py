@@ -7,6 +7,12 @@
 # Feel free to rename the models, but don't rename db_table values or field names.
 from django.db import models
 
+from django.db.models.signals import pre_save, pre_delete
+
+from django.dispatch import receiver
+
+from django.contrib.auth.models import User
+
 
 class A(models.Model):
     xm = models.CharField(max_length=20, blank=True, null=True)
@@ -188,3 +194,38 @@ class T(models.Model):
     class Meta:
         managed = False
         db_table = 't'
+@receiver(pre_delete, sender=S)
+
+def pre_delete_student(sender, instance, **kwargs):
+
+     Xh = instance.xh
+
+     course = E.objects.filter(xh=Xh)
+
+     course.delete()
+
+
+
+
+
+@receiver(pre_delete, sender=T)
+
+def pre_delete_teacher(sender, instance, **kwargs):
+
+     Gh= instance.gh
+
+     course = C.objects.filter(gh=Gh)
+
+     course.delete()
+
+
+
+@receiver(pre_delete, sender=C)
+
+def pre_delete_course(sender, instance, **kwargs):
+
+     Kh= instance.kh
+
+     course = E.objects.filter(kh=Kh)
+
+     course.delete()
