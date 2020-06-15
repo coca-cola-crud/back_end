@@ -79,7 +79,8 @@ def addCourse(request):
                              yx=teacherinfo.yx,
                              gh=teacherinfo.gh,
                              sksj=info['sksj'],
-                             rs=info['rs']
+                             xkrs=0,
+                             xzrs=info['xzrs']
                             )
             return JsonResponse({'ret': 0, 'message':'添加成功'})
     else:

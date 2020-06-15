@@ -94,7 +94,8 @@ class C(models.Model):
     yx = models.CharField(max_length=20)
     gh = models.CharField(max_length=10)
     sksj = models.CharField(max_length=30)
-    rs = models.IntegerField()
+    xkrs = models.IntegerField()
+    xzrs = models.IntegerField()
 
     class Meta:
         managed = False

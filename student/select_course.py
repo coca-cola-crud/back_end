@@ -37,7 +37,7 @@ def listcourse(request):
     for i in retlist:
         courseid=i['kh']
         course = C.objects.get(kh=courseid)
-        course.rs = xknum(courseid)
+        course.xkrs = xknum(courseid)
         course.save()
     return JsonResponse({'ret': 0, 'retcourselist': retlist})
 
@@ -72,61 +72,67 @@ def selectcourse(request):
                 'ret': 1,
                 'msg': f'没有课号为{select_kh}的课程'
         })
-    curStudent = S.objects.get(xh=request.session['member_id'])
-    Id = curStudent.xh + selectinfo.kh
-    selectedcourse = E.objects.filter(xh=curStudent.xh)
-    selectedcourse = list(selectedcourse)
+    # 判断是否该课程选课人数是否已满
+    if selectinfo.xkrs < selectinfo.xzrs:
+        curStudent = S.objects.get(xh=request.session['member_id'])
+        Id = curStudent.xh + selectinfo.kh
+        selectedcourse = E.objects.filter(xh=curStudent.xh)
+        selectedcourse = list(selectedcourse)
 
-    flag = 0
-    for i in selectedcourse:
-        sametime = 0
-        print(i.kh,i.sksj)
-        #判断上课时间是否有重合
-        selectedsksj=i.sksj.split(' ')
-        selectsksj=selectinfo.sksj.split(' ')
-        print(selectsksj,selectedsksj)
-        for x in selectedsksj:
-            for y in selectsksj:
-                xweek=x[0]
-                yweek=y[0]
-                xtime=x[1:].split('-')
-                ytime=y[1:].split('-')
-                if sametime == 0:
-                    if xweek != yweek:
-                        sametime=0
-                    elif int(xtime[1]) < int(ytime[0]) or int(ytime[1]) < int(xtime[0]):
-                        sametime=0
+        flag = 0
+        for i in selectedcourse:
+            sametime = 0
+            print(i.kh, i.sksj)
+            # 判断上课时间是否有重合
+            selectedsksj = i.sksj.split(' ')
+            selectsksj = selectinfo.sksj.split(' ')
+            print(selectsksj, selectedsksj)
+            for x in selectedsksj:
+                for y in selectsksj:
+                    xweek = x[0]
+                    yweek = y[0]
+                    xtime = x[1:].split('-')
+                    ytime = y[1:].split('-')
+                    if sametime == 0:
+                        if xweek != yweek:
+                            sametime = 0
+                        elif int(xtime[1]) < int(ytime[0]) or int(ytime[1]) < int(xtime[0]):
+                            sametime = 0
+                        else:
+                            sametime = 1
+                            break
                     else:
-                        sametime=1
                         break
-                else:
-                    break
 
-        if i.km == selectinfo.km:
-            flag = 1
-            return JsonResponse({'ret': 1, 'msg': f'{i.km}已选，选课失败'})
-        elif sametime:
-            flag = 1
-            return JsonResponse({'ret': 1, 'msg': '时间冲突，选课失败'})
+            if i.km == selectinfo.km:
+                flag = 1
+                return JsonResponse({'ret': 1, 'msg': f'{i.km}已选，选课失败'})
+            elif sametime:
+                flag = 1
+                return JsonResponse({'ret': 1, 'msg': '时间冲突，选课失败'})
 
-    if flag == 0:
-        E.objects.create(xh=curStudent.xh,
-                     kh=selectinfo.kh,
-                     id=Id,
-                     km=selectinfo.km,
-                     xf=selectinfo.xf,
-                     sksj=selectinfo.sksj,
-                     rkls=selectinfo.rkls,
-                     gh=selectinfo.gh,
-                     zpcj="NULL")
-        courseid=selectinfo.kh
-        course = C.objects.get(kh=courseid)
-        course.rs = xknum(courseid)
-        course.save()
+        if flag == 0:
+            E.objects.create(xh=curStudent.xh,
+                             kh=selectinfo.kh,
+                             id=Id,
+                             km=selectinfo.km,
+                             xf=selectinfo.xf,
+                             sksj=selectinfo.sksj,
+                             rkls=selectinfo.rkls,
+                             gh=selectinfo.gh,
+                             zpcj="NULL")
+            courseid = selectinfo.kh
+            course = C.objects.get(kh=courseid)
+            course.xkrs = xknum(courseid)
+            course.save()
+        return JsonResponse({'ret': 0, 'msg': '选课成功'})
 
+    else:
+        return JsonResponse({
+            'ret': 1,
+            'msg': '课程人数已满，选课失败'
+        })
 
-
-    return JsonResponse({'ret': 0, 'msg': '选课成功'})
 
 #删除一条选课记录
 def deletecourse(request):
@@ -144,7 +150,7 @@ def deletecourse(request):
     course.delete()
 
     course = C.objects.get(kh=courseId)
-    course.rs = xknum(courseId)
+    course.xkrs = xknum(courseId)
     course.save()
     return JsonResponse({'ret': 0,'msg':'删除成功'})
 
