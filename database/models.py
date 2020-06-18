@@ -14,6 +14,7 @@ from django.dispatch import receiver
 from django.contrib.auth.models import User
 
 
+
 class A(models.Model):
     xm = models.CharField(max_length=20, blank=True, null=True)
     gh = models.CharField(primary_key=True, max_length=10)
@@ -194,6 +195,18 @@ class T(models.Model):
     class Meta:
         managed = False
         db_table = 't'
+
+
+class Y(models.Model):
+    yxh = models.CharField(primary_key=True, max_length=10)
+    yxm = models.CharField(max_length=20)
+    dz = models.CharField(max_length=20)
+    dh = models.CharField(max_length=10)
+
+    class Meta:
+        managed = False
+        db_table = 'y'
+
 @receiver(pre_delete, sender=S)
 
 def pre_delete_student(sender, instance, **kwargs):
@@ -229,3 +242,4 @@ def pre_delete_course(sender, instance, **kwargs):
      course = E.objects.filter(kh=Kh)
 
      course.delete()
+

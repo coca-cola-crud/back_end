@@ -1,6 +1,6 @@
 from django.http import JsonResponse
 import json
-from database.models import E,S,T,C
+from database.models import E,S,T,C,Y
 from django.contrib.auth.models import User
 
 def dispatcher(request):
@@ -29,7 +29,7 @@ def listCourse(request):
     request.params = json.loads(request.body)
     Yx = request.params['yx']
     courses = C.objects.filter(yx=Yx)
-    print(courses)
+    #课程列表
     courses=list(courses)
     retlist=[]
     for i in courses:
@@ -45,8 +45,14 @@ def listCourse(request):
             'xzrs':i.xzrs
 
         })
-    return JsonResponse({'retlist': retlist})
+    #院系列表
+    yxlist = []
+    yx = Y.objects.values()
+    yx = list(yx)
+    for j in yx:
+        yxlist.append(j['yxm'])
 
+    return JsonResponse({'yxlist':yxlist,'retlist': retlist})
 
 #开课
 def addCourse(request):
