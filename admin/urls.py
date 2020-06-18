@@ -7,5 +7,6 @@ urlpatterns = [
     path('admin/sign/', sign_in_out.signin),
     path('admin/student_info/', student_info.dispatcher),
     path('admin/teacher_info/', teacher_info.dispatcher),
-    path('admin/course_info/',course_info.dispatcher)
+    path('admin/course_info/',course_info.dispatcher),
+
 ]

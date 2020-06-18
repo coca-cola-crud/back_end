@@ -19,8 +19,33 @@ def dispatcher(request):
         return addCourse(request)
     elif action == 'del_course':
         return delCourse(request)
+    elif action == 'list_course':
+        return listCourse(request)
     else:
         return JsonResponse({'ret': 1, 'msg': '不支持该类型http请求'})
+
+#根据学院列出课表
+def listCourse(request):
+    request.params = json.loads(request.body)
+    Yx = request.params['yx']
+    courses = C.objects.filter(yx=Yx)
+    print(courses)
+    courses=list(courses)
+    retlist=[]
+    for i in courses:
+        retlist.append({
+           'kh':i.kh,
+           'km':i.km,
+            'xf':i.xf,
+            'gh':i.gh,
+            'yx':i.yx,
+            'rkls':i.rkls,
+            'sksj':i.sksj,
+            'xkrs':i.xkrs,
+            'xzrs':i.xzrs
+
+        })
+    return JsonResponse({'retlist': retlist})
 
 
 #开课
