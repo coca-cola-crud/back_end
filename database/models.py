@@ -216,25 +216,26 @@ def pre_delete_student(sender, instance, **kwargs):
 
 
 
-
-@receiver(pre_delete, sender=T)
-def pre_delete_teacher(sender, instance, **kwargs):
-     Gh= instance.gh
-     course = C.objects.filter(gh=Gh)
-     course.delete()
-
-
-
 @receiver(pre_delete, sender=C)
 def pre_delete_course(sender, instance, **kwargs):
      Kh= instance.kh
      course = E.objects.filter(kh=Kh)
      course.delete()
 
+@receiver(pre_delete, sender=T)
+def pre_delete_teacher(sender, instance, **kwargs):
+     Gh= instance.gh
+     course = C.objects.filter(gh=Gh)
+     course.delete()
+     course1 = E.objects.filter(gh=Gh)
+     course1.delete()
+
+
 @receiver(pre_delete, sender=Y)
 def pre_delete_course(sender, instance, **kwargs):
-     Yxm= instance.yxm
-     course = C.objects.filter(yxm=Yxm)
+     Yxh= instance.yxh
+     Yx=Y.objects.get(yxh=Yxh)
+     course = C.objects.filter(yx=Yx.yxm)
      course.delete()
-     teacher = T.objects.filter(yxm=Yxm)
+     teacher = T.objects.filter(yx=Yx.yxm)
      teacher.delete()

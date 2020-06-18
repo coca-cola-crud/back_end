@@ -100,7 +100,7 @@ def addCourse(request):
                         break
             if sametime:
                 flag1 = 1
-                return JsonResponse({'ret': 1, 'msg': '该教师该时间已开课，开课失败'})
+                return JsonResponse({'ret': 1, 'message': '该教师该时间已开课，开课失败'})
 
         if flag1 == 0:
             C.objects.create(kh=info['kh'],
