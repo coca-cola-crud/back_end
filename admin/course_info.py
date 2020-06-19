@@ -181,4 +181,4 @@ def alterInfo(request):
 
     # 注意，一定要执行save才能将修改信息保存到数据库
     course.save()
-    return JsonResponse({'ret': 0})
+    return JsonResponse({'ret': 0,'msg': '修改成功'})
