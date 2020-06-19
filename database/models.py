@@ -213,13 +213,8 @@ def pre_delete_student(sender, instance, **kwargs):
      Xh = instance.xh
      course = E.objects.filter(xh=Xh)
      course.delete()
+     print(2)
 
-#删除课程选课记录删除
-@receiver(pre_delete, sender=C)
-def pre_delete_course(sender, instance, **kwargs):
-     Kh= instance.kh
-     course = E.objects.filter(kh=Kh)
-     course.delete()
 
 #删除教师，教师课程，选课记录删除
 @receiver(pre_delete, sender=T)

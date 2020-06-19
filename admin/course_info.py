@@ -133,6 +133,9 @@ def delCourse(request):
     courseid = request.params['courseid']
     course = C.objects.get(kh=courseid)
     # delete 方法就将该记录从数据库中删除了
+
+    courses = E.objects.filter(kh=courseid)
+    courses.delete()
     course.delete()
     return JsonResponse({'ret': 0, 'msg': '删除成功'})
 
@@ -146,10 +149,10 @@ def alterInfo(request):
         # 根据 id 从数据库中找到相应的课程记录
         course = C.objects.get(kh=courseid)
     except C.DoesNotExist:
-        return {
+        return JsonResponse({
             'ret': 1,
             'msg': f'id 为`{courseid}`的课程不存在'
-        }
+        })
 
     if 'km' in newdata:
         print(newdata['km'])
@@ -171,3 +174,4 @@ def alterInfo(request):
 
     # 注意，一定要执行save才能将修改信息保存到数据库
     course.save()
+    return JsonResponse({'ret': 0})
