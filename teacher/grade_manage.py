@@ -1,6 +1,6 @@
 from django.http import JsonResponse
 import json
-from database.models import C,E,S,T
+from database.models import C,E,S,T,X
 def dispatcher(request):
     # 将请求参数统一放入request 的 params 属性中，方便后续处理
     # GET请求 参数 在 request 对象的 GET属性中
@@ -107,3 +107,7 @@ def gradeDistribution(request):
             elif zpcj <= 100 and zpcj >= 90:
                 retlist[10] += 1
     return JsonResponse({'retlist': retlist})
+
+def curTerm():
+    curterm = X.objects.get(status=1)
+    return curterm.xq

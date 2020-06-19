@@ -103,6 +103,7 @@ class C(models.Model):
     sksj = models.CharField(max_length=30)
     xkrs = models.IntegerField()
     xzrs = models.IntegerField()
+    xq = models.CharField(max_length=30)
 
     class Meta:
         managed = False
@@ -163,6 +164,7 @@ class E(models.Model):
     sksj = models.CharField(max_length=30)
     id = models.CharField(primary_key=True, max_length=30)
     gh = models.CharField(max_length=10)
+    xq = models.CharField(max_length=30)
 
     class Meta:
         managed = False
@@ -197,6 +199,15 @@ class T(models.Model):
         db_table = 't'
 
 
+class X(models.Model):
+    xq = models.CharField(primary_key=True, max_length=30)
+    status = models.IntegerField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'x'
+
+
 class Y(models.Model):
     yxh = models.CharField(primary_key=True, max_length=10)
     yxm = models.CharField(max_length=20)
@@ -206,7 +217,6 @@ class Y(models.Model):
     class Meta:
         managed = False
         db_table = 'y'
-
 #删除学生选课记录也删除
 @receiver(pre_delete, sender=S)
 def pre_delete_student(sender, instance, **kwargs):
@@ -225,14 +235,14 @@ def pre_delete_teacher(sender, instance, **kwargs):
      course1 = E.objects.filter(gh=Gh)
      course1.delete()
 
-@receiver(pre_delete, sender=Y)
-def pre_delete_course(sender, instance, **kwargs):
-     Yxh= instance.yxh
-     Yx=Y.objects.get(yxh=Yxh)
-     course = C.objects.filter(yx=Yx.yxm)
-     course.delete()
-     teacher = T.objects.filter(yx=Yx.yxm)
-     teacher.delete()
+# @receiver(pre_delete, sender=Y)
+# def pre_delete_course(sender, instance, **kwargs):
+#      Yxh= instance.yxh
+#      Yx=Y.objects.get(yxh=Yxh)
+#      course = C.objects.filter(yx=Yx.yxm)
+#      course.delete()
+#      teacher = T.objects.filter(yx=Yx.yxm)
+#      teacher.delete()
 
 #教师信息更改，C表信息更新
 @receiver(post_save,sender = T)
@@ -248,3 +258,4 @@ def post_save_course(sender, instance, **kwargs):
     Kh = instance.kh
     course = C.objects.get(kh=Kh)
     E.objects.filter(kh=Kh).update(km=course.km, xf=course.xf, rkls=course.rkls,sksj=course.sksj)
+

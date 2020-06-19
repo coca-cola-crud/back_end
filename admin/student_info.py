@@ -90,10 +90,10 @@ def alterInfo(request):
         # 根据 id 从数据库中找到相应的学生记录
         student = S.objects.get(xh=studentid)
     except S.DoesNotExist:
-        return {
+        return JsonResponse({
             'ret': 1,
             'msg': f'id 为`{studentid}`的学生不存在'
-        }
+        })
 
     if 'nl' in newdata:
         print(newdata['nl'])
@@ -110,7 +110,6 @@ def alterInfo(request):
     # 注意，一定要执行save才能将修改信息保存到数据库
 
     student.save()
-
     return JsonResponse({'ret': 0})
 
 

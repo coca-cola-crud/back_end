@@ -1,6 +1,6 @@
 from django.http import JsonResponse
 import json
-from database.models import E,S,T,C,Y
+from database.models import E,S,T,C,Y,X
 from django.contrib.auth.models import User
 
 def dispatcher(request):
@@ -26,11 +26,13 @@ def dispatcher(request):
     else:
         return JsonResponse({'ret': 1, 'msg': '不支持该类型http请求'})
 
-#根据学院列出课表
+#根据学院列出当前学期课表
 def listCourse(request):
+
     request.params = json.loads(request.body)
     Yx = request.params['yx']
-    courses = C.objects.filter(yx=Yx)
+    print(curTerm())
+    courses = C.objects.filter(yx=Yx,xq=curTerm())
     #课程列表
     courses=list(courses)
     retlist=[]
@@ -121,7 +123,8 @@ def addCourse(request):
                              gh=teacherinfo.gh,
                              sksj=info['sksj'],
                              xkrs=0,
-                             xzrs=info['xzrs']
+                             xzrs=info['xzrs'],
+                             xq=curTerm()
                             )
             return JsonResponse({'ret': 0, 'message':'添加成功'})
     else:
@@ -218,3 +221,7 @@ def timeOk(Sksj,Gh,courseid):
                 return False
     if flag==0:
         return True
+
+def curTerm():
+    curterm = X.objects.get(status=1)
+    return curterm.xq

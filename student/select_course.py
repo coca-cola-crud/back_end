@@ -1,6 +1,6 @@
 from django.http import JsonResponse
 import json
-from database.models import C,E,S
+from database.models import C,E,S,X
 def dispatcher(request):
     # 将请求参数统一放入request 的 params 属性中，方便后续处理
     # GET请求 参数 在 request 对象的 GET属性中
@@ -25,20 +25,35 @@ def dispatcher(request):
     else:
         return JsonResponse({'ret': 1, 'msg': '不支持该类型http请求'})
 
-#列出可选课程，开课表
+#列出当前学期可选课程，开课表
 def listcourse(request):
+    print(curTerm())
     # 返回一个 QuerySet 对象 ，包含所有的表记录
-    qs = C.objects.values()
+    qs = C.objects.filter(xq=curTerm())
     # 将 QuerySet 对象 转化为 list 类型
     # 否则不能 被 转化为 JSON 字符串
-    print(qs)
-    retlist = list(qs)
-    print(retlist)
-    for i in retlist:
-        courseid=i['kh']
+    #print(qs)
+    courselist = list(qs)
+   # print(retlist)
+    for i in courselist:
+        courseid=i.kh
         course = C.objects.get(kh=courseid)
         course.xkrs = xknum(courseid)
         course.save()
+    retlist=[]
+    for i in courselist:
+        retlist.append({
+            'rkls':i.rkls,
+            'gh':i.gh,
+            'sksj':i.sksj,
+            'xzrs':i.xzrs,
+            'xkrs':i.xkrs,
+            'km':i.km,
+            'kh':i.kh,
+            'xf':i.xf,
+            'yx':i.yx
+        })
+        print(retlist)
     return JsonResponse({'ret': 0, 'retcourselist': retlist})
 
 #列出已选课程
@@ -46,7 +61,7 @@ def listselectedcourse(request):
     # 获得当前学生信息
     curStudent = S.objects.get(xh=request.session['member_id'])
     #返回该学生的选课记录
-    Eqs = E.objects.filter(xh=curStudent.xh)
+    Eqs = E.objects.filter(xh=curStudent.xh,xq=curTerm())
     Cqs = C.objects.values()
     # 将 QuerySet 对象 转化为 list 类型
     Elist = list(Eqs)
@@ -57,7 +72,6 @@ def listselectedcourse(request):
         for j in Clist:
             if j['kh'] == i.kh and j['gh'] == i.gh:
                 retlist.append(j)
-    print(retlist)
     return JsonResponse({'ret': 0, 'retlist': retlist})
 
 
@@ -121,7 +135,8 @@ def selectcourse(request):
                              sksj=selectinfo.sksj,
                              rkls=selectinfo.rkls,
                              gh=selectinfo.gh,
-                             zpcj="NULL")
+                             zpcj="NULL",
+                             xq=curTerm())
             courseid = selectinfo.kh
             course = C.objects.get(kh=courseid)
             course.xkrs = xknum(courseid)
@@ -163,3 +178,7 @@ def xknum(courseid):
         count+=1
     print(count)
     return count
+
+def curTerm():
+    curterm = X.objects.get(status=1)
+    return curterm.xq

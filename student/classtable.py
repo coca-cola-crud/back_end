@@ -1,11 +1,11 @@
 from django.http import JsonResponse
 from django.db import connection
 from django.contrib.auth.models import User
-from database.models import S,E
+from database.models import S,E,X
 import json
 def classtable(request):
     student = S.objects.get(xh=request.session['member_id'])
-    selectedcourse=E.objects.filter(xh=student.xh)
+    selectedcourse=E.objects.filter(xh=student.xh,xq=curTerm())
     selectedcourse=list(selectedcourse)
     print(selectedcourse)
     Mon=['','','','','','','','','','','','','']
@@ -73,4 +73,7 @@ def classtable(request):
     ]})
 
 
+def curTerm():
+    curterm = X.objects.get(status=1)
+    return curterm.xq
 

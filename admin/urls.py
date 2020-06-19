@@ -1,6 +1,6 @@
 from django.urls import path
 
-from admin import student_info,sign_in_out,teacher_info,course_info, personal_info,yx_info
+from admin import student_info,sign_in_out,teacher_info,course_info, personal_info,yx_info,term
 
 urlpatterns = [
     path('admin/PersonalInformation/', personal_info.list_info),
@@ -9,5 +9,6 @@ urlpatterns = [
     path('admin/teacher_info/', teacher_info.dispatcher),
     path('admin/course_info/',course_info.dispatcher),
     path('admin/yx_info/',yx_info.dispatcher),
+    path('admin/term/',term.dispatcher),
 
 ]
