@@ -4,5 +4,6 @@ urlpatterns = [
     path('teacher/sign/', sign_in_out.signin),
     path('teacher/PersonalInformation/', personal_info.list_info),
     path('teacher/GradeManage/', grade_manage.dispatcher),
-    path('teacher/password/',password.alterpassword),
+    path('teacher/password/alter',password.alterpassword),
+    path('teacher/password/verify',password.verify),
 ]

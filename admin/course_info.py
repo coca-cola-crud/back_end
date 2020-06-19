@@ -173,12 +173,48 @@ def alterInfo(request):
         course.rkls=teacher.xm
         course.yx=teacher.yx
     if 'sksj' in newdata:
-        course.sksj = newdata['sksj']
+        if timeOk(newdata['sksj'],newdata['gh'],courseid):
+            course.sksj = newdata['sksj']
+        else:
+            return JsonResponse({'ret': 1, 'msg': '时间冲突,修改失败'})
     if 'zkrs' in newdata:
         course.zkrs = newdata['zkrs']
-    if 'xkrs' in newdata:
-        course.xkrs = newdata['xkrs']
+
 
     # 注意，一定要执行save才能将修改信息保存到数据库
     course.save()
     return JsonResponse({'ret': 0,'msg': '修改成功'})
+
+def timeOk(Sksj,Gh,courseid):
+    addedcourse = C.objects.filter(gh=Gh)
+    courses = C.objects.filter(gh=Gh)
+    curCourse = C.objects.get(kh=courseid)
+    flag = 0
+    for i in addedcourse:
+        if i.kh!=curCourse.kh:
+            sametime = 0
+            print(i.kh, i.sksj)
+            # 判断上课时间是否有重合
+            addedsksj = i.sksj.split(' ')
+            addsksj = Sksj.split(' ')
+            for x in addedsksj:
+                for y in addsksj:
+                    xweek = x[0]
+                    yweek = y[0]
+                    xtime = x[1:].split('-')
+                    ytime = y[1:].split('-')
+                    if sametime == 0:
+                        if xweek != yweek:
+                            sametime = 0
+                        elif int(xtime[1]) < int(ytime[0]) or int(ytime[1]) < int(xtime[0]):
+                            sametime = 0
+                        else:
+                            sametime = 1
+                            break
+                    else:
+                        break
+            if sametime:
+                flag=1
+                return False
+    if flag==0:
+        return True
