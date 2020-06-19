@@ -77,7 +77,7 @@ def delTeacher(request):
     return JsonResponse({'ret': 0, 'msg': '删除成功'})
 
 
-#修改信息
+#修改信息，E，C表中信息改变
 def alterInfo(request):
     # 从请求消息中 获取修改教师的信息
     # 找到该教师，并且进行修改操作

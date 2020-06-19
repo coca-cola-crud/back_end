@@ -21,6 +21,8 @@ def dispatcher(request):
         return delCourse(request)
     elif action == 'list_course':
         return listCourse(request)
+    elif action == 'alter_info':
+        return alterInfo(request)
     else:
         return JsonResponse({'ret': 1, 'msg': '不支持该类型http请求'})
 
@@ -58,7 +60,15 @@ def listCourse(request):
 def addCourse(request):
     # 从请求消息中 获取要开课的信息
     info = request.params['data']
-    teacherinfo=T.objects.get(gh=info['gh'])
+    teacherid=info['gh']
+    try:
+        # 根据 id 从数据库中找到相应的学生记录
+        teacherinfo = T.objects.get(gh=info['gh'])
+    except T.DoesNotExist:
+        return JsonResponse({
+            'ret': 1,
+            'message': f'id 为`{teacherid}`的教师不存在'
+        })
     # 并且插入到数据库中
     # 返回值 就是对应插入记录的对象
     courseid=info['kh']
@@ -118,7 +128,7 @@ def addCourse(request):
         return JsonResponse({'ret': 1, 'message':'该课号课程已开'})
 
 
-#C表删除课程，E表中该教师开课记录同时删除，使用触发器？
+#C表删除课程，E表中该教师开课记录同时删除，使用触发器
 def delCourse(request):
     courseid = request.params['courseid']
     course = C.objects.get(kh=courseid)
@@ -126,4 +136,38 @@ def delCourse(request):
     course.delete()
     return JsonResponse({'ret': 0, 'msg': '删除成功'})
 
+#修改课程信息,E表中也要改变
+def alterInfo(request):
 
+    courseid = request.params['courseid']
+    newdata = request.params['newdata']
+
+    try:
+        # 根据 id 从数据库中找到相应的课程记录
+        course = C.objects.get(kh=courseid)
+    except C.DoesNotExist:
+        return {
+            'ret': 1,
+            'msg': f'id 为`{courseid}`的课程不存在'
+        }
+
+    if 'km' in newdata:
+        print(newdata['km'])
+        course.km = newdata['km']
+    if 'xf' in newdata:
+        course.xf = newdata['xf']
+    if 'rkls' in newdata:
+        course.xm = newdata['rkls']
+    if 'gh' in newdata:
+        course.gh = newdata['gh']
+        teacher=T.objects.get(gh=newdata['gh'])
+        course.yx=teacher.yx
+    if 'sksj' in newdata:
+        course.sksj = newdata['sksj']
+    if 'zkrs' in newdata:
+        course.zkrs = newdata['zkrs']
+    if 'xkrs' in newdata:
+        course.xkrs = newdata['xkrs']
+
+    # 注意，一定要执行save才能将修改信息保存到数据库
+    course.save()

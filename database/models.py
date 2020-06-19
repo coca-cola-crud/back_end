@@ -7,7 +7,7 @@
 # Feel free to rename the models, but don't rename db_table values or field names.
 from django.db import models
 
-from django.db.models.signals import pre_save, pre_delete
+from django.db.models.signals import pre_save, pre_delete,post_save
 
 from django.dispatch import receiver
 
@@ -207,21 +207,21 @@ class Y(models.Model):
         managed = False
         db_table = 'y'
 
+#删除学生选课记录也删除
 @receiver(pre_delete, sender=S)
 def pre_delete_student(sender, instance, **kwargs):
      Xh = instance.xh
      course = E.objects.filter(xh=Xh)
      course.delete()
 
-
-
-
+#删除课程选课记录删除
 @receiver(pre_delete, sender=C)
 def pre_delete_course(sender, instance, **kwargs):
      Kh= instance.kh
      course = E.objects.filter(kh=Kh)
      course.delete()
 
+#删除教师，教师课程，选课记录删除
 @receiver(pre_delete, sender=T)
 def pre_delete_teacher(sender, instance, **kwargs):
      Gh= instance.gh
@@ -229,7 +229,6 @@ def pre_delete_teacher(sender, instance, **kwargs):
      course.delete()
      course1 = E.objects.filter(gh=Gh)
      course1.delete()
-
 
 @receiver(pre_delete, sender=Y)
 def pre_delete_course(sender, instance, **kwargs):
@@ -239,3 +238,18 @@ def pre_delete_course(sender, instance, **kwargs):
      course.delete()
      teacher = T.objects.filter(yx=Yx.yxm)
      teacher.delete()
+
+#教师信息更改，C表信息更新
+@receiver(post_save,sender = T)
+def post_save_teacher(sender, instance, **kwargs):
+    Gh = instance.gh
+    teacher = T.objects.get(gh=Gh)
+    C.objects.filter(gh=Gh).update(yx=teacher.yx,rkls=teacher.xm)
+
+
+#课程信息更改，E表信息更新
+@receiver(post_save,sender = C)
+def post_save_course(sender, instance, **kwargs):
+    Kh = instance.kh
+    course = C.objects.get(kh=Kh)
+    E.objects.filter(kh=Kh).update(km=course.km, xf=course.xf, rkls=course.rkls,sksj=course.sksj)

@@ -149,7 +149,6 @@ def deletecourse(request):
         })
     # delete 方法就将该记录从数据库中删除了
     course.delete()
-
     course = C.objects.get(kh=courseId)
     course.xkrs = xknum(courseId)
     course.save()
