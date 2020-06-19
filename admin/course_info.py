@@ -159,11 +159,18 @@ def alterInfo(request):
         course.km = newdata['km']
     if 'xf' in newdata:
         course.xf = newdata['xf']
-    if 'rkls' in newdata:
-        course.xm = newdata['rkls']
     if 'gh' in newdata:
         course.gh = newdata['gh']
-        teacher=T.objects.get(gh=newdata['gh'])
+        try:
+            # 根据 id 从数据库中找到相应的课程记录
+            teacher = T.objects.get(gh=newdata['gh'])
+        except C.DoesNotExist:
+            return JsonResponse({
+                'ret': 1,
+                'msg': '该老师不存在'
+            })
+        course.gh=teacher.gh
+        course.rkls=teacher.xm
         course.yx=teacher.yx
     if 'sksj' in newdata:
         course.sksj = newdata['sksj']
