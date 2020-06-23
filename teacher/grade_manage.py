@@ -24,10 +24,10 @@ def dispatcher(request):
     else:
         return JsonResponse({'ret': 1, 'msg': '不支持该类型http请求'})
 
-#列出该老师开的课程
+#列出该老师该学期开的课程
 def listmycourse(request):
     curTeacher = T.objects.get(gh=request.session['member_id'])
-    mycourse = C.objects.filter(gh=curTeacher.gh)
+    mycourse = C.objects.filter(gh=curTeacher.gh,xq=curTerm())
     mycourse = list(mycourse)
     retlist=[]
     for i in mycourse:
@@ -107,7 +107,6 @@ def gradeDistribution(request):
             elif zpcj <= 100 and zpcj >= 90:
                 retlist[10] += 1
     return JsonResponse({'retlist': retlist})
-
 def curTerm():
     curterm = X.objects.get(status=1)
     return curterm.xq

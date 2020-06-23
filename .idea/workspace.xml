@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f11e6f8a-c05c-4668-8680-052cec6831b9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/admin/term.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/course_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/admin/course_info.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/student_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/admin/student_info.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/admin/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/database/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/database/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/classtable.py" beforeDir="false" afterPath="$PROJECT_DIR$/student/classtable.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/select_course.py" beforeDir="false" afterPath="$PROJECT_DIR$/student/select_course.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/term.py" beforeDir="false" afterPath="$PROJECT_DIR$/admin/term.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/teacher/grade_manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/teacher/grade_manage.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -217,12 +210,12 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:stugrade@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@297d69e0" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@1aaab1e9" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:stugrade@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@17be18f0" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@4f194e26" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
             <select />
@@ -309,7 +302,8 @@
       <workItem from="1592482553372" duration="5857000" />
       <workItem from="1592492392378" duration="3865000" />
       <workItem from="1592538649747" duration="16170000" />
-      <workItem from="1592566712891" duration="8118000" />
+      <workItem from="1592566712891" duration="8698000" />
+      <workItem from="1592878451054" duration="1265000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1578919692600</created>
@@ -584,7 +578,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592555589699</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="增加学期">
+      <created>1592574858315</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1592574858315</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -683,7 +684,8 @@
     <MESSAGE value="管理员增加对课程的删除&#10;添加教师工号不存在返回错误信息&#10;修改教师信息，课程信息信号机制" />
     <MESSAGE value="修改课程信息" />
     <MESSAGE value="修改密码" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改密码" />
+    <MESSAGE value="增加学期" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加学期" />
   </component>
   <component name="WindowStateProjectService">
     <state x="145" y="77" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592053714500">
@@ -694,10 +696,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="358" y="0" key="#personal_info/0.0.1280.680@0.0.1280.680" timestamp="1584972650265" />
-    <state x="70" y="0" key="CommitChangelistDialog2" timestamp="1592555585548">
+    <state x="70" y="0" key="CommitChangelistDialog2" timestamp="1592574855629">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="70" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1592555585548" />
+    <state x="70" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1592574855629" />
     <state width="242" height="189" key="DatabaseViewActions_Filter" timestamp="1584617451122">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -710,26 +712,26 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="99" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1585717915445" />
-    <state width="1493" height="148" key="GridCell.Tab.0.bottom" timestamp="1592570510600">
+    <state width="1493" height="666" key="GridCell.Tab.0.bottom" timestamp="1592879705102">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="845" height="160" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1585289967941" />
-    <state width="1493" height="148" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592570510600" />
-    <state width="1493" height="148" key="GridCell.Tab.0.center" timestamp="1592570510600">
+    <state width="1493" height="666" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592879705102" />
+    <state width="1493" height="666" key="GridCell.Tab.0.center" timestamp="1592879705102">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="845" height="160" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1585289967941" />
-    <state width="1493" height="148" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1592570510600" />
-    <state width="1493" height="148" key="GridCell.Tab.0.left" timestamp="1592570510599">
+    <state width="1493" height="666" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1592879705102" />
+    <state width="1493" height="666" key="GridCell.Tab.0.left" timestamp="1592879705102">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="845" height="160" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1585289967941" />
-    <state width="1493" height="148" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1592570510599" />
-    <state width="1493" height="148" key="GridCell.Tab.0.right" timestamp="1592570510600">
+    <state width="1493" height="666" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1592879705102" />
+    <state width="1493" height="666" key="GridCell.Tab.0.right" timestamp="1592879705102">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="845" height="160" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1585289967941" />
-    <state width="1493" height="148" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1592570510600" />
+    <state width="1493" height="666" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1592879705102" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1590246441812">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -754,10 +756,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="490" y="154" width="540" height="524" key="StructurePopup/0.0.1536.824@0.0.1536.824" timestamp="1592112152283" />
-    <state x="300" y="160" key="Vcs.Push.Dialog.v2" timestamp="1592555606701">
+    <state x="300" y="160" key="Vcs.Push.Dialog.v2" timestamp="1592574876634">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="300" y="160" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1592555606701" />
+    <state x="300" y="160" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1592574876634" />
     <state x="412" y="0" width="333" height="824" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1588843130850">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -770,11 +772,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="841" y="90" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1592570480631" />
-    <state x="383" y="185" key="com.intellij.ide.util.TipDialog" timestamp="1592566715685">
+    <state x="383" y="185" key="com.intellij.ide.util.TipDialog" timestamp="1592878456958">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="319" y="153" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1585717862933" />
-    <state x="383" y="185" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1592566715685" />
+    <state x="383" y="185" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1592878456958" />
     <state x="901" y="317" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589209505706">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

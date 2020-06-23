@@ -21,6 +21,8 @@ def dispatcher(request):
         return addTerm(request)
     elif action == 'set_term':
         return setTerm(request)
+    elif action == 'cur_term':
+        return curTerm(request)
     else:
         return JsonResponse({'ret': 1, 'msg': '不支持该类型http请求'})
 
@@ -60,3 +62,7 @@ def setTerm(request):
     term.save()
     return JsonResponse({'ret': 0, 'message': '设置成功'})
 
+def curTerm(request):
+    curterm = X.objects.get(status=1)
+    print(curterm.xq)
+    return JsonResponse({'curterm': curterm.xq})
