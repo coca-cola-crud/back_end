@@ -119,7 +119,7 @@ def selectcourse(request):
                     else:
                         break
 
-            if i.km == selectinfo.km:
+            if i.kh == selectinfo.kh:
                 flag = 1
                 return JsonResponse({'ret': 1, 'msg': f'{i.km}已选，选课失败'})
             elif sametime:

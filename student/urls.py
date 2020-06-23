@@ -7,6 +7,7 @@ urlpatterns = [
     path('student/sign/', sign_in_out.signin),
     path('student/select_course/', select_course.dispatcher),
     path('student/list_grade/', stu_grade.listgrade),
+    path('student/list_grade/tendance',stu_grade.gradeTend),
     path('student/password/alter', password.alterpassword),
     path('student/password/verify', password.verify),
     path('student/password/', password.alterpassword),
