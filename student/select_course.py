@@ -91,7 +91,7 @@ def selectcourse(request):
     if selectinfo.xkrs < selectinfo.xzrs:
         curStudent = S.objects.get(xh=request.session['member_id'])
         Id = curStudent.xh + selectinfo.kh
-        selectedcourse = E.objects.filter(xh=curStudent.xh)
+        selectedcourse = E.objects.filter(xh=curStudent.xh,xq=curTerm())
         selectedcourse = list(selectedcourse)
 
         flag = 0

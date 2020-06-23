@@ -4,8 +4,6 @@
     <list default="true" id="f11e6f8a-c05c-4668-8680-052cec6831b9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/student/select_course.py" beforeDir="false" afterPath="$PROJECT_DIR$/student/select_course.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/stu_grade.py" beforeDir="false" afterPath="$PROJECT_DIR$/student/stu_grade.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/student/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,12 +209,12 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:stugrade@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@4a43a274" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@2d9ebb7f" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:stugrade@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@7943feda" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@26ff1ee5" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
             <select />
@@ -308,6 +306,8 @@
       <workItem from="1592892028216" duration="260000" />
       <workItem from="1592892313798" duration="96000" />
       <workItem from="1592892526006" duration="2846000" />
+      <workItem from="1592895564979" duration="807000" />
+      <workItem from="1592909503488" duration="35000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1578919692600</created>
@@ -596,7 +596,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592879752023</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="成绩走势">
+      <created>1592895602281</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1592895602282</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -697,7 +704,8 @@
     <MESSAGE value="修改密码" />
     <MESSAGE value="增加学期" />
     <MESSAGE value="返回当前学期" />
-    <option name="LAST_COMMIT_MESSAGE" value="返回当前学期" />
+    <MESSAGE value="成绩走势" />
+    <option name="LAST_COMMIT_MESSAGE" value="成绩走势" />
   </component>
   <component name="WindowStateProjectService">
     <state x="145" y="77" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592053714500">
@@ -708,10 +716,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="358" y="0" key="#personal_info/0.0.1280.680@0.0.1280.680" timestamp="1584972650265" />
-    <state x="70" y="0" key="CommitChangelistDialog2" timestamp="1592879748660">
+    <state x="70" y="0" key="CommitChangelistDialog2" timestamp="1592895596400">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="70" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1592879748660" />
+    <state x="70" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1592895596400" />
     <state width="242" height="189" key="DatabaseViewActions_Filter" timestamp="1584617451122">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -768,10 +776,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="490" y="154" width="540" height="524" key="StructurePopup/0.0.1536.824@0.0.1536.824" timestamp="1592112152283" />
-    <state x="300" y="160" key="Vcs.Push.Dialog.v2" timestamp="1592879761300">
+    <state x="300" y="160" key="Vcs.Push.Dialog.v2" timestamp="1592895610275">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="300" y="160" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1592879761300" />
+    <state x="300" y="160" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1592895610275" />
     <state x="412" y="0" width="333" height="824" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1588843130850">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -784,11 +792,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="841" y="90" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1592570480631" />
-    <state x="383" y="185" key="com.intellij.ide.util.TipDialog" timestamp="1592895565898">
+    <state x="383" y="185" key="com.intellij.ide.util.TipDialog" timestamp="1592909503928">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="319" y="153" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1585717862933" />
-    <state x="383" y="185" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1592895565898" />
+    <state x="383" y="185" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1592909503928" />
     <state x="901" y="317" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589209505706">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
